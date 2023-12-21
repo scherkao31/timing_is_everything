@@ -81,3 +81,7 @@ _______________________________________________________________
 
 Summary, and conclusion.
 <iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+Deuxième : 
+
+<iframe src="assets/plot/plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
