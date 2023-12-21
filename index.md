@@ -83,6 +83,6 @@ Summary, and conclusion.
 
 [View Interactive Plot](./graphs/interactive_plot.html)
 
-ICI : 
+ICI : SALUT 
 
 [View Interactive Plot](./graphs/plot.html)
