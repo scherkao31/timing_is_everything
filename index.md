@@ -62,6 +62,15 @@ But that's not the only metric we're considering. We're also looking at how view
 
 In this part, we will try to see how the release month of a movie influences its overall success and popularity. We'll examine this through various lenses – box office revenues, viewer votes, and ratings, while also considering how the quality of data documentation has evolved over the years. Let's dive into this multifaceted analysis and see what the numbers reveal about timing and movie success.
 
+### 1.1 Sub-part title
+Add your stuff here.
+### 1.2 Sub-part title
+Add your stuff here.
+### 1.3 Sub-part title
+Add your stuff here.
+### 1.4 Sub-part title
+Add your stuff here.
+
 #### Transition :
 Small conclusion
 
