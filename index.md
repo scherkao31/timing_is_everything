@@ -37,4 +37,36 @@ _______________________________________________________________
 
 # Setting Your Watch for the Red Carpet - How Timing Influences Oscar Success (Question 2)
 
+Now, as we roll out the red carpet, it's time to see how timing influences a movie's journey to Oscar glory. Is there a 'golden month' for releasing a film that could increase its chances of capturing that coveted golden statue? In this part of our exploration, we will try to see which factors impact a movie's success, especially in terms of its likelihood to win an Oscar. Does release timing play a crucial role, and has its effect evolved over time? We're also going to delve into whether it's possible to predict a film's Oscar odds based on various factors, including its release month, the country of origin, language, and more. Let's discover the intricate dance between the calendar and the Oscars.
 
+### 2.1 Sub-part title
+Add your stuff here.
+### 2.2 Sub-part title
+Add your stuff here.
+### 2.3 Sub-part title
+Add your stuff here.
+### 2.4 Sub-part title
+Add your stuff here.
+
+#### Transition :
+
+Alright, film enthusiasts, brace yourselves for a bit of a reality check. Let's face it - are Oscar-winning movies always the ones we enjoy the most? Think about it. We know the superhero blockbusters aren't exactly Oscar bait, but come on, how good was the latest Spiderman ? With that in mind, let's shift our focus from the glittering Oscars to the wider world of box office hits and audience favorites. After all, there's more to movie success than just golden statues.
+
+_______________________________________________________________
+
+# Box Office and ratings – Timing the Public's Pulse (Question 3)
+
+As we continue our quest to discover if a movie's success can be timed, we now turn to the big question: how does the release timing impact a movie's box office success and public appeal? We're about to connect the dots between calendars, cash, and crowds. For this, we'll delve into the box office, which essentially measures the total revenue a movie earns from ticket sales. It's a fair assumption that the more people flock to see a movie, the more it resonates with the general public.
+
+But that's not the only metric we're considering. We're also looking at how viewers rate movies, another crucial indicator of public opinion.
+
+In this part, we will try to see how the release month of a movie influences its overall success and popularity. We'll examine this through various lenses – box office revenues, viewer votes, and ratings, while also considering how the quality of data documentation has evolved over the years. Let's dive into this multifaceted analysis and see what the numbers reveal about timing and movie success.
+
+#### Transition :
+Small conclusion
+
+_______________________________________________________________
+
+# Conclusion
+
+Summary, and conclusion.
