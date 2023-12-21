@@ -82,3 +82,7 @@ _______________________________________________________________
 Summary, and conclusion.
 
 [View Interactive Plot](./graphs/interactive_plot.html)
+
+ICI : 
+
+[View Interactive Plot](./graphs/plot.html)
