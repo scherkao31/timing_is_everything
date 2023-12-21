@@ -62,14 +62,15 @@ But that's not the only metric we're considering. We're also looking at how view
 
 In this part, we will try to see how the release month of a movie influences its overall success and popularity. We'll examine this through various lenses – box office revenues, viewer votes, and ratings, while also considering how the quality of data documentation has evolved over the years. Let's dive into this multifaceted analysis and see what the numbers reveal about timing and movie success.
 
-### 1.1 Sub-part title
-Add your stuff here.
-### 1.2 Sub-part title
-Add your stuff here.
-### 1.3 Sub-part title
-Add your stuff here.
-### 1.4 Sub-part title
-Add your stuff here.
+### 3.1. Ratings Versus Revenue – Does a "bad movie" makes less money than a "better" one ?
+First, let's tackle the correlation between ratings and revenue. It seems intuitive that higher ratings should mean more money, right? Well, our data tells a more nuanced story. We'll explore why movies with mediocre ratings don't necessarily earn less, and how those with top ratings don't always hit the jackpot in terms of revenue. It's a complex equation where excellence in ratings doesn't always translate into box office gold.
+### 3.2. Timing and Ratings – Searching for a Pattern
+Next, we look at whether there's a link between when a movie is released and the ratings it receives. Does a summer blockbuster get rated differently from a cozy winter flick? Our findings might surprise you, as we unravel the (non)relationship between release months and how viewers rate these films.
+### 3.3. Box Office Timing – Identifying the Lucrative times
+#### 3.3.1. By Month – The Monthly Box Office Cycle
+Let's break down the box office cycle month by month. We'll analyze which months are box office magnets, attracting audiences in droves, and which ones seem to be stuck in a cinematic slump. Our data suggests that not all months are created equal when it comes to raking in the revenue.
+#### 3.3.2. By Season – The Seasonal Box Office Trends
+Zooming out, we'll assess box office performance by season. Is summer really the blockbuster champion? Does winter bring more than just the holiday spirit to theaters? We'll see how each season stacks up in the race for box office success.
 
 #### Transition :
 Small conclusion
