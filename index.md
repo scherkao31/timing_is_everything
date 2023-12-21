@@ -39,15 +39,18 @@ _______________________________________________________________
 
 Now, as we roll out the red carpet, it's time to see how timing influences a movie's journey to Oscar glory. Is there a 'golden month' for releasing a film that could increase its chances of capturing that coveted golden statue? In this part of our exploration, we will try to see which factors impact a movie's success, especially in terms of its likelihood to win an Oscar. Does release timing play a crucial role, and has its effect evolved over time? We're also going to delve into whether it's possible to predict a film's Oscar odds based on various factors, including its release month, the country of origin, language, and more. Let's discover the intricate dance between the calendar and the Oscars.
 
-### **2.1. Exploration and Data Preprocessing** 
-It is noticed that some records in the Award dataset are corresponding to the same movie name. This is because of spliting of genres in data preprocessing. We need therefore first remove the duplicates to make sure that each movie is uniquely represented in the dataset.
-[image_1_test](assets/img/image_1_test.png)
+### 2.1 Overview
+There is no shortcut to win the crown. However, good timing makes a easier way! We sometimes can observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). "Crash," directed by Paul Haggis, won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10. 
+Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize. We first have a look at how the movies with different release months are distributed in the Oscar selection.
+[Bar Chart: Distribution of release month]
+### 2.2 The predominant role of US movies 
 Add your stuff here.
-### 2.2 Sub-part title
+
+### 2.3 Level I: Entry to Oscar selection
+As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. 
 Add your stuff here.
-### 2.3 Sub-part title
-Add your stuff here.
-### 2.4 Sub-part title
+
+### 2.4 Level II: Oscar Winner
 Add your stuff here.
 
 #### Transition :
