@@ -80,9 +80,4 @@ _______________________________________________________________
 # Conclusion
 
 Summary, and conclusion.
-
-[View Interactive Plot](./graphs/interactive_plot.html)
-
-ICI : SALUT 
-
-[View Interactive Plot](./graphs/plot.html)
+<iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
