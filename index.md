@@ -39,7 +39,9 @@ _______________________________________________________________
 
 Now, as we roll out the red carpet, it's time to see how timing influences a movie's journey to Oscar glory. Is there a 'golden month' for releasing a film that could increase its chances of capturing that coveted golden statue? In this part of our exploration, we will try to see which factors impact a movie's success, especially in terms of its likelihood to win an Oscar. Does release timing play a crucial role, and has its effect evolved over time? We're also going to delve into whether it's possible to predict a film's Oscar odds based on various factors, including its release month, the country of origin, language, and more. Let's discover the intricate dance between the calendar and the Oscars.
 
-### 2.1 Sub-part title
+### **2.1. Exploration and Data Preprocessing** 
+It is noticed that some records in the Award dataset are corresponding to the same movie name. This is because of spliting of genres in data preprocessing. We need therefore first remove the duplicates to make sure that each movie is uniquely represented in the dataset.
+[image_1_test](assets/img/image_1_test.png)
 Add your stuff here.
 ### 2.2 Sub-part title
 Add your stuff here.
