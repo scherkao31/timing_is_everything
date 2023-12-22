@@ -355,36 +355,32 @@ We will now create a "Ratio Revenue" metric that will offer a more insightful pe
 <iframe src="assets/plot/3_movie_metrics_evolution.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe> 
 This line graph depicts the "Ratio Revenue" of movies over a span of approximately three decades. This ratio, as previously discussed, measures each movie's box office revenue against the industry average for its release year. A few key observations can be drawn from this visualization:
 
-**Variability Over Time:** The plot shows significant fluctuation in the ratio values year over year. This variability could reflect changes in consumer preferences, the impact of blockbuster releases, or shifts in the movie production landscape.
+- **Variability Over Time:** The plot shows significant fluctuation in the ratio values year over year. This variability could reflect changes in consumer preferences, the impact of blockbuster releases, or shifts in the movie production landscape.
 
-**Peaks and Troughs:** Notable peaks suggest years when movies performed exceptionally well compared to the annual average.
+- **Peaks and Troughs:** Notable peaks suggest years when movies performed exceptionally well compared to the annual average.
 
-**Upward Trend in Recent Years:** There appears to be an upward trend in the later years of the graph, especially a sharp rise towards the end. This might be attributable to a range of factors, including the increasing globalization of movie distribution, advances in marketing, or the rising popularity of franchise films that tend to draw large audiences.
+- **Upward Trend in Recent Years:** There appears to be an upward trend in the later years of the graph, especially a sharp rise towards the end. This might be attributable to a range of factors, including the increasing globalization of movie distribution, advances in marketing, or the rising popularity of franchise films that tend to draw large audiences.
 
-**Above-Average Dataset:** As previously mentioned, since the dataset likely contains movies that are above average in terms of box office performance, the ratio values predominantly exceeding 1 align with this expectation. This indicates that the movies in the dataset are not just randomly selected but are skewed towards higher performers.
+- **Above-Average Dataset:** As previously mentioned, since the dataset likely contains movies that are above average in terms of box office performance, the ratio values predominantly exceeding 1 align with this expectation. This indicates that the movies in the dataset are not just randomly selected but are skewed towards higher performers.
 
 ### 3.2. Monthly Momentum: Dissecting Box Office and Ratings Trends
 #### 3.2.1. Rating Breakdown by Months
 
-This bar graph comparing the average vote and ratings by month further confirms the lack of strong seasonal trends in how viewers and critics rate movies. The ratings are relatively even, with no significant spikes or drops that would suggest a particular time of the year when movies are rated more favorably or harshly.
-
-These findings suggest that while box office revenues may have clear seasonal patterns, critical and audience ratings do not seem to be influenced in the same way. This could indicate that while the success of a film's financial returns is strategically planned around certain months, the quality of the film, as judged by viewers and critics, is not necessarily linked to its release date.
-
-Which actually does make sens.
+The following bar graph comparing the average vote and ratings by month further confirms the lack of strong seasonal trends in how viewers and critics rate movies.
 
 <iframe src="assets/plot/3_monthly_votes_and_ratings.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-These findings suggest that while box office revenues may have clear seasonal patterns, critical and audience ratings do not seem to be influenced in the same way. This could indicate that while the success of a film's financial returns is strategically planned around certain months, the quality of the film, as judged by viewers and critics, is not necessarily linked to its release date.
+These findings suggest that audience ratings do not seem to be influenced in the same way. This could indicate that while the success of a film's financial returns is strategically planned around certain months, the quality of the film, as judged by viewers and critics, is not necessarily linked to its release date.
 
 Which actually does make sens.
 
 ![](./assets/img/3_avg_rating_month_genre.png)
 
-The heatmap representing average movie ratings by month and genre suggests that audience preferences and critical reception do not strongly fluctuate throughout the year. 
+The heatmap suggest the same conclusion, even while considering the genres.
 
 #### 3.2.2. Box Office Breakdown by Months
 
-We look at whether there's a link between when a movie is released and the ratings it receives. Does a summer blockbuster get rated differently from a cozy winter flick? Our findings might surprise you, as we unravel the (non)relationship between release months and how viewers rate these films.
+Does a summer blockbuster get rated differently from a cozy winter flick? Our findings might surprise you, as we unravel the (non)relationship between release months and how viewers rate these films.
 
 ![](./assets/img/3_ratio_revenu_per_month.png)
 
@@ -401,7 +397,6 @@ This heatmap provides a nuanced view of how different genres perform across vari
 This genre-based seasonal performance can be a critical factor for studios when scheduling movie releases to maximize financial returns. For example, releasing a Romance film in February could capitalize on Valentine's Day, while Action and Adventure films might be strategically placed in summer months to draw in larger audiences during school holidays.
 
 Or if you only follow the data, the way to go is to release a Drama movie in November !
-
 
 ### 3.3. How about the seasons ?
 #### 3.3.1. Critic's Calendar: Evaluating Ratings Across Seasons
