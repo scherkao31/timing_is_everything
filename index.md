@@ -469,6 +469,8 @@ _______________________________________________________________
 
 # A happy ending ?
 
+![](./assets/img/happy_ending.jpeg)
+
 In our journey through the intricate world of movie release strategies and success, we've uncovered the profound impact of timing in the film industry. "Is Timing Everything?" has delved deep into the complex relationship between when a movie is released and its subsequent success, weaving through data-driven analyses and revealing patterns that could potentially reshape how we perceive movie scheduling and its outcomes.
 
 **Key Insights:**
