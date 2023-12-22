@@ -399,6 +399,8 @@ This genre-based seasonal performance can be a critical factor for studios when 
 Or if you only follow the data, the way to go is to release a Drama movie in November !
 
 ### 3.3. How about the seasons ?
+Let's define what we mean by 'seasons.' We categorize the year into four distinct periods - Spring, Summer, Autumn, and Winter - each encapsulating a group of months with similar behavioral patterns. For instance, it's reasonable to expect similar audience habits in June and July, both falling in the Summer season. This grouping helps us to analyze the impact of broader timeframes on movie popularity and success, rather than focusing on the small differences between individual months.
+
 #### 3.3.1. Critic's Calendar: Evaluating Ratings Across Seasons
 
 <iframe src="assets/plot/3_seasonal_votes_and_ratings.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
@@ -423,10 +425,9 @@ The second heatmap, focusing on average box office revenue by season and genre, 
 
 The considerable variance in box office ratio revenue by season for different genres suggests that audience spending habits are influenced by the time of year, perhaps due to holiday periods, seasonal marketing strategies, or weather-related behavioral changes. For instance, Summer shows to be a strong season for Action movies, likely due to the popularity of summer blockbusters.
 
+## 3.4. Propensity Score Estimation: 
 
-## Propensity Score Estimation: 
-
-To delve deeper into resolving our central dilemma, we will now conduct a thorough analysis to determine how a movie's release month impacts its popularity by calculating propensity scores based on factors like genre, runtime, country, and release year, using logistic regression to model the likelihood of a film's release in a particular month. We then employ nearest-neighbor matching to form comparable groups for each release month, enabling more meaningful comparisons. The Average Treatment Effect (ATE) for each month is calculated by comparing the average votes and ratings between movies released in that month (the treatment group) and those not released in that month (the control group). This detailed approach allows us to uncover the nuanced effects of release timing on a movie's popularity.
+To delve deeper into resolving our central dilemma, we conduct a small analysis to determine how a movie's release month impacts its popularity by calculating propensity scores based on factors like genre, runtime, country, and release year, using logistic regression to model the likelihood of a film's release in a particular month. We then employ nearest-neighbor matching to form comparable groups for each release month, enabling more meaningful comparisons. The Average Treatment Effect (ATE) for each month is calculated by comparing the average votes and ratings between movies released in that month (the treatment group) and those not released in that month (the control group). This detailed approach allows us to uncover the nuanced effects of release timing on a movie's popularity.
 
 | Month      | ATE Votes      | ATE Ratings   |
 |------------|----------------|---------------|
@@ -449,7 +450,7 @@ Films released in May, June, July, September, November, and December are more po
 The highest boost in ratings is seen for films debuting in September and December.
 Movies released in January, February, March, and October aren't as popular, with fewer votes and lower ratings.
 
-#### Conlusion and nuances
+## Conlusion and nuances
 
 - **Seasonal Timing vs. Strategic Release Decisions**: 
   - Significant seasonal variation in box office revenues is observed, with certain months and seasons, like Summer and Autumn, showing higher average revenues. 
@@ -460,9 +461,6 @@ Movies released in January, February, March, and October aren't as popular, with
 
 - **Discretization by Season**:
   - Grouping data by season rather than individual months was effective, capturing broader influences such as weather and holidays, which have more significant impacts on movie-going behavior than differences between individual months.
-
-- **Influence of Weather and Holidays**:
-  - Certain genres perform better in specific seasons, likely reflecting the influence of weather conditions and holiday periods on audience behavior.
 
 - **Need for Further Investigation**:
   - More research is needed to distinguish between the effects of seasonal appeal and strategic release timing by production companies.
