@@ -159,7 +159,7 @@ In this section, we explore the potential presence of seasonality in film releas
 
 TABLE
 
-INTERRACTIVE PLOT
+<iframe src="assets/plot/distri_month_genre.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 ### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
 
