@@ -20,8 +20,21 @@ _______________________________________________________________
 
 Let's dive into the intriguing interplay between movie genres and their release calendars. Are horror films naturally drawn to Halloween? Do summer months exclusively belong to action-packed blockbusters? In this part of our story, we'll try to see if there are any recurring patterns between a film's genre and its release timing within a year. Do these rhythms exist, and if so, do they change depending on where the movie is released? This exploration isn't just about identifying patterns; it's about understanding whether these insights can help us predict the genre of upcoming film releases in different seasons. It's time to discover if there's a secret rhythm dictating when different genres of movies make their grand entrance on the big screen.
 
-### 1.1 Sub-part title
-Add your stuff here.
+### 1.1 Exploration
+#### 1.1.1. Removing uncessary information for this research question
+For this analysis, we will focus on the film genres, the release period of the year, and the locations where they are released.
+We observe, unsurprisingly, that the number of films increases considerably with the years. However, the proportion of older films is not negligible. In the context of our study, where we will investigate patterns that may exist between the time of year and the number of film releases, we must take this factor into account and study its evolution over time.
+
+#### 1.1.2. Bar chart of release months
+The study will investigate the possible existence of a correlation between annual periodicity and film genres. However, it is also relevant to examine the existence of trends that are not dependent on the film genre or location. To provide us with an initial idea, we will calculate the monthly average of films released, considering all genres and locations. This will give us an overview of the distribution of film releases throughout the seasons. Of course, further analysis will be necessary before drawing any definitive conclusions.
+![1_monthly_movie_count.png]("1_monthly_movie_count.png") 
+This bar chart allows us to conclude that the distribution of films throughout the year is not uniform; for instance, the summer months appear to have fewer releases than others. Therefore, it is necessary to differentiate, for each genre, whether the trend is driven by the overall distribution of films throughout the year or if it is specific to certain film genres.
+
+#### 1.1.3. Repartition of the main genre
+In our dataset, we have a wide variety of genres represented.  For now, we will focus on the five most represented genres in the dataset.
+Let's observe the representation of film genres in our resulting dataset.
+![1_movie_genre_dist_pie.png]("1_movie_genre_dist_pie.png") 
+
 ### 1.2 Sub-part title
 Add your stuff here.
 ### 1.3 Sub-part title
@@ -43,7 +56,7 @@ Now, as we roll out the red carpet, it's time to see how timing influences a mov
 There is no shortcut to win the crown. However, good timing makes an easier way! We can sometimes observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). Directed by Paul Haggis, it won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10.  
 
 Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize. We first have a look at how the movies with different release months are distributed in the Oscar selection.  
-[Release_Month_Distribution]("assets/img/Release_Month_Distribution.png")  
+![Release_Month_Distribution]("assets/img/Release_Month_Distribution.png")  
 
 The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar. For example, why movies released in December are significantly more than in other months?  
 
