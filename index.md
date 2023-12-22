@@ -64,7 +64,7 @@ The pie chart shows us the proportion of each continent in our dataset. We obser
 
 Before continuing, it is important to take into account and important factor, the distribution of the number of data by year.
 
-HISTOGRAM INTERACTIVE 
+<iframe src="assets/plot/1_histo_counts_release.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 This histogram displays the distribution of the number of films released each year, regardless of their genre or release location. We observe a significant increase over the years. To maintain the relevance of our analysis, we have established a threshold of 200 films per year as a selection criterion for the years to be included in our study. After applying this criterion, we selected the most recent year that did not meet it and then excluded all data prior to that date. This approach ensures that our dataset remains statistically relevant and consistent over time.
 
