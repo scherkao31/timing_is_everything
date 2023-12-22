@@ -162,6 +162,51 @@ In this section, we will examine whether there are differences in seasonality be
 
 #### 1.3.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Months depending on Genre and Location
 
+In this section, we explore the potential presence of seasonality in film releases, considering both genre and location, across time. To do so, we will perform a similar analysis to that in Section 2.1, while distinctly separating genres and locations.
+
+TABLE
+
+INTERRACTIVE PLOT
+
+#### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
+
+TABLE 
+
+It appears that the seasonal patterns within genres and locations remain stable throughout the selected period [1993-2009]. It's worth noting that this period was initially chosen in section 2.3 because the seasonal patterns, encompassing all genres and locations, were stable during that time. This latest analysis simply demonstrates that when we subdivide our dataset by genre and location, any intrinsic patterns within these subdatasets also remain consistent over the same period.
+
+#### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
+To further delve into this analysis, we will calculate autocorrelation, as done in section 2.3. However, this time, we will separate the film genres and continents.
+
+TABLE
+
+It appears that the seasonal patterns within genres and locations remain stable throughout the selected period [1993-2009]. It's worth noting that this period was initially chosen in section 2.3 because the seasonal patterns, encompassing all genres and locations, were stable during that time. This latest analysis simply demonstrates that when we subdivide our dataset by genre and location, any intrinsic patterns within these subdatasets also remain consistent over the same period.
+
+To further delve into this analysis, we will calculate autocorrelation, as done in section 2.3. However, this time, we will separate the film genres and continents.
+
+![1_matrix_genre_continent.png]("1_matrix_genre_continent.png")
+
+The heatmap reveals some highly interesting findings. Firstly, it allows us to affirm that the presence or absence of an annual seasonal pattern varies depending on the cinematic genre and location. Let's take, for example, the cinematic genre "action" across all locations. We can observe that the autocorrelation is very low, or even non-existent, for North America, year after year (lag of 1 year). Consequently, we can conclude that it is unlikely for this cinematic genre to exhibit recurring patterns from year to year based on release months.
+
+Conversely, certain cinematic genres show distinct patterns, with "drama" being a notable example. It demonstrates a very strong autocorrelation from one year to the next. This effect is particularly pronounced in Europe and North America, where the autocorrelation remains significant for up to 4 years. In such cases, we can confidently assert that this genre is highly likely to display an annual seasonal motif, and this pattern extends over several years.
+
+On a broader scale, the continent with the least autocorrelation in this dataset is Asia. Europe and North America seem to follow similar patterns based on their respective genres.
+
+Furthermore, when examining each genre individually, we uncover disparities between them. Some genres exhibit pronounced annual seasonal patterns, while others do not display such patterns at all.
+
+#### 1.3.3. Decoding Trends and Seasonality : by Genre Category and Region
+
+Similarly to the analysis conducted in point 2, we now focus on examining the seasonal multiplicative factors. The objective here is to highlight, for genres and locations exhibiting seasonal patterns as identified in point 3.2, the months that stand out from the general trend and contribute to the formation of these patterns.
+
+![1_heatmap_seasonality.png]("1_heatmap_seasonality.png")
+
+It is interesting to delve into the case of the drama film genre. According to our analysis in section 3.2, this genre exhibited annual seasonality for all continents combined. However, this latest analysis reveals intriguing differences within its seasonal patterns.
+
+Specifically, when examining the multiplicative factors of the drama genre in Europe and North America, we observe notable distinctions. In Europe, the month of May appears to be significant, with a multiplicative factor of 1.73 compared to the general trend, indicating that a substantial number of drama films are released in May. In contrast, in North America, May does not significantly impact the trend, as evidenced by a factor of 1.04. Conversely, January exhibits an inverse behavior, with North America having a factor of 1.63, while Europe's factor is 0.95.
+
+It's important to note that both regions share high values for June and July and lower values for September.
+
+While we may not be able to discern every single difference between genres, locations, and release months individually, a quick glance at the heatmap confirms our initial hypothesis. Annual seasonal patterns indeed exist for certain genres and locations, and when they do, these patterns exhibit variations among them.
+
 ### 1.2 Sub-part title
 Add your stuff here.
 ### 1.3 Sub-part title
