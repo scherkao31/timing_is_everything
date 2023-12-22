@@ -492,4 +492,6 @@ In summary, our exploration into the CBU movie dataset has not only highlighted 
 
 **Our story concludes with a realization:** in the world of cinema, as in life, timing is indeed everything. It's about capturing the right moment, understanding your audience, and harmoniously aligning with the cultural and seasonal milieu. This intricate dance of timing, content, and audience is what makes the movie industry a fascinating realm of endless possibilities and discoveries.
 
-![](./assets/img/the_end.png)
+<p align="center">
+  <img src="./assets/img/the_end.png" />
+</p>
