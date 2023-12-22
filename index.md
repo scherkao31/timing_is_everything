@@ -20,19 +20,19 @@ _______________________________________________________________
 
 Let's dive into the intriguing interplay between movie genres and their release calendars. Are horror films naturally drawn to Halloween? Do summer months exclusively belong to action-packed blockbusters? In this part of our story, we'll try to see if there are any recurring patterns between a film's genre and its release timing within a year. Do these rhythms exist, and if so, do they change depending on where the movie is released? This exploration isn't just about identifying patterns; it's about understanding whether these insights can help us predict the genre of upcoming film releases in different seasons. It's time to discover if there's a secret rhythm dictating when different genres of movies make their grand entrance on the big screen.
 
-### 1.1 Exploration
-#### 1.1.1. Let's focus on what matters
+## 1.1 Exploration
+### 1.1.1. Let's focus on what matters
 For this analysis, we will focus on the film genres, the release period of the year, and the locations where they are released.
 We observe, unsurprisingly, that the number of films increases considerably with the years. However, the proportion of older films is not negligible. In the context of our study, where we will investigate patterns that may exist between the time of year and the number of film releases, we must take this factor into account and study its evolution over time.
 
-#### 1.1.2. Annual periodicity and film genres
+### 1.1.2. Annual periodicity and film genres
 Let's investigate the possible existence of a correlation between annual periodicity and film genres. It is also relevant to examine the existence of trends that are not dependent on the film genre or location. To provide us with an initial idea, we compute the monthly average of films released, considering all genres and locations. This gives us an overview of the distribution of film releases throughout the seasons.
 
 ![1_monthly_movie_count.png](./assets/img/1_monthly_movie_count.png) 
 
 This bar chart allows us to conclude that the distribution of films throughout the year is not uniform; for instance, the summer months appear to have fewer releases than others. Therefore, it is necessary to differentiate, for each genre, whether the trend is driven by the overall distribution of films throughout the year or if it is specific to certain film genres.
 
-#### 1.1.3. Repartition of the main genre
+### 1.1.3. Repartition of the main genre
 In our dataset, we have a wide variety of genres represented.  For now, we will focus on the five most represented genres in the dataset.
 Let's observe the representation of film genres in our resulting dataset.
 
@@ -44,7 +44,7 @@ TONS OF GRAPHS : WHAT TO DO ?
 
 We observe significantly different distributions among genres. Action films appear to have a relatively uniform distribution throughout the year. It's worth noting that action is the only genre that doesn't experience a decline during the summer, which contradicts the general trend. It's important to mention that for our final word, correlation tests will be considered to confirm whether or not months can have an impact on certain genres
 
-#### 1.1.4. Repartition of the continent
+### 1.1.4. Repartition of the continent
 
 In our dataset, we have a wide range of countries represented. To study the link between location and the distribution of release months, we will group these countries by their continents.
 
@@ -53,7 +53,7 @@ In our dataset, we have a wide range of countries represented. To study the link
 The pie chart shows us the proportion of each continent in our dataset. We observe that three continents represent almost the entirety of our dataset, so we will focus on these.
 
 
-#### 1.1.5. Setting a Threshold for Data Inclusion
+### 1.1.5. Setting a Threshold for Data Inclusion
 
 Before continuing, it is important to take into account and important factor, the distribution of the number of data by year.
 
@@ -63,9 +63,9 @@ This histogram displays the distribution of the number of films released each ye
 
 Furthermore, upon examining this graph, we notice that after 2009, the number of films decreases significantly in the dataset. This trend appears counterintuitive and may be attributed to the difficulty of obtaining recent data (the dataset was published in 2012). To avoid potential data bias, we are focusing on data up to the year 2009.
 
-### 1.2. Comprehensive Seasonality Analysis Across All Genres and Locations
+## 1.2. Comprehensive Seasonality Analysis Across All Genres and Locations
 
-#### 1.2.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Rates
+### 1.2.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Rates
 
 Let's now investigate the possibility of seasonality in film releases, regardless of genre or location, over time. To do so, we conduct a thorough analysis with the aim of predicting the percentage of films released each year during a specific month.
 
@@ -75,7 +75,7 @@ Upon examining this plot, we observe that the percentage of film releases per mo
 
 To investigate this further, we will utilize the Canova Hansen Test.
 
-#### 1.2.2. Seasonal Pattern Stability: Canova-Hansen Tests on Time Series Data
+### 1.2.2. Seasonal Pattern Stability: Canova-Hansen Tests on Time Series Data
 
 In the Canova-Hansen test, the 'm' parameter represents the data's seasonal period, for example, 12 for monthly data and 4 for quarterly data. A result of 'D = 1' indicates the need for seasonal differentiation to stabilize the seasonal pattern, suggesting variable seasonality in the data.
 
@@ -83,7 +83,7 @@ In our case, the result of the Canova-Hansen Test is:  1
 
 The Canova-Hansen test reveals that the seasonal patterns in our data are not constant over the analyzed period. To deepen our understanding, we will calculate the autocorrelation of our data at various time lags. This analysis will enable us to determine how long a specific seasonal pattern persists in our dataset, providing more precise insights into the underlying temporal dynamics and the persistence of seasonal trends.
 
-#### 1.2.3. Analysis of Seasonal Pattern Persistence : Autocorrelogramme
+### 1.2.3. Analysis of Seasonal Pattern Persistence : Autocorrelogramme
 
 An autocorrelation plot, or autocorrelogram, is a vital tool in time series analysis, used for visualizing and measuring autocorrelation, i.e., the relationship between a time series and its past values at different lags.
 
@@ -94,7 +94,7 @@ An autocorrelation plot, or autocorrelogram, is a vital tool in time series anal
 
 ![1_autocorrelation_graph.png](./assets/img/1_autocorrelation_graph.png) 
 
-##### Analysis of the Autocorrelation plot:
+#### Analysis of the Autocorrelation plot:
 
 1. **Initial Peak**: The first lag exhibits a peak close to 1, which is expected as it represents the correlation of the series with itself.
 
@@ -111,7 +111,7 @@ Note: At the beginning of the plot, we observe a few points in the first year th
 **Conclusion**: Therefore, we can assert two key findings: there is an annual seasonality in our data, as evidenced by the significant peaks occurring every 12 months in our autocorrelation plot. Furthermore, it seems that the seasonal effect has a long-term impact on the years, exhibiting significant correlations up to 17 years later.
 Additionally, the fact that this autocorrelation is no longer significant after 17 years provides us with additional information: seasonality has evolved over time, aligning with the implications of the Canova-Hansen Test result.
 
-#### 1.2.4. Decoding Trends and Seasonality: Seasonality Visualization
+### 1.2.4. Decoding Trends and Seasonality: Seasonality Visualization
 
 Now that we know that seasonality has changed over time and that patterns tend to change approximately every 17 years, we will attempt to visualize these differences. To do so, we will extract two datasets from our data. The first dataset will contain the most recent 17 years [1993, 2009], and the second will encompass the preceding 17 years [1976, 1992]. Subsequently, we will conduct a Canova-Hansen test to ensure that among these datasets, the seasonal motif remains stable.
 
@@ -144,7 +144,7 @@ Indeed, we observe that the seasonal patterns have changed between these two per
 
 In conclusion, it's fascinating to observe how seasonal patterns evolve over time. We notice significant differences. The most recent period in our dataset appears to exhibit more pronounced variations than before, suggesting that these month-to-month differences seem to intensify over time.
 
-### 1.3. Detailed Study by Genre and Location
+## 1.3. Detailed Study by Genre and Location
 
 In this section, we will examine whether there are differences in seasonality between film genres and locations. To do this, we will work exclusively with data from the ten most recent years in our dataset. The selection of these last ten years is motivated by several factors:
 
@@ -152,7 +152,7 @@ In this section, we will examine whether there are differences in seasonality be
 
 2. Stability of Seasonal Patterns: As demonstrated by the previous analysis, seasonal patterns appear to be stable every 17 years, regardless of genre or location. By taking this stability into account, we aim to limit biases related to the overall trend, allowing us to delve deeper into the analysis by genre and continent.
 
-#### 1.3.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Months depending on Genre and Location
+### 1.3.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Months depending on Genre and Location
 
 In this section, we explore the potential presence of seasonality in film releases, considering both genre and location, across time. To do so, we will perform a similar analysis to that in Section 2.1, while distinctly separating genres and locations.
 
@@ -160,13 +160,13 @@ TABLE
 
 INTERRACTIVE PLOT
 
-#### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
+### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
 
 TABLE 
 
 It appears that the seasonal patterns within genres and locations remain stable throughout the selected period [1993-2009]. It's worth noting that this period was initially chosen in section 2.3 because the seasonal patterns, encompassing all genres and locations, were stable during that time. This latest analysis simply demonstrates that when we subdivide our dataset by genre and location, any intrinsic patterns within these subdatasets also remain consistent over the same period.
 
-#### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
+### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
 To further delve into this analysis, we will calculate autocorrelation, as done in section 2.3. However, this time, we will separate the film genres and continents.
 
 TABLE
@@ -185,7 +185,7 @@ On a broader scale, the continent with the least autocorrelation in this dataset
 
 Furthermore, when examining each genre individually, we uncover disparities between them. Some genres exhibit pronounced annual seasonal patterns, while others do not display such patterns at all.
 
-#### 1.3.3. Decoding Trends and Seasonality : by Genre Category and Region
+### 1.3.3. Decoding Trends and Seasonality : by Genre Category and Region
 
 Similarly to the analysis conducted in point 2, we now focus on examining the seasonal multiplicative factors. The objective here is to highlight, for genres and locations exhibiting seasonal patterns as identified in point 3.2, the months that stand out from the general trend and contribute to the formation of these patterns.
 
@@ -199,7 +199,7 @@ It's important to note that both regions share high values for June and July and
 
 While we may not be able to discern every single difference between genres, locations, and release months individually, a quick glance at the heatmap confirms our initial hypothesis. Annual seasonal patterns indeed exist for certain genres and locations, and when they do, these patterns exhibit variations among them.
 
-#### Transition :
+## Transition :
 
 As our data story unfolds, it's clear that certain movie genres do have their preferred release times. But why? While it's straightforward for Christmas and Halloween movies, other genres aren't as clear-cut. Perhaps production companies are tuning into the public's mood, providing just the right kind of film at just the right time. Or maybe, they've learned from experience that release timing can significantly influence a film's success. After all, isn't that a key goal for them - to make their movies as successful as possible? But here's a thought - what exactly defines success in the film industry? Is it the accolades from peers or the applause from the audience? Well, it's time to explore both. To satisfy the film aficionados among us, let's first dive into how the release calendar impacts the most prestigious accolade in the movie world – the Oscar.
 
