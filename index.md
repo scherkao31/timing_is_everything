@@ -39,19 +39,23 @@ This bar chart allows us to conclude that the distribution of films throughout t
 In our dataset, we have a wide variety of genres represented.  For now, we will focus on the five most represented genres in the dataset.
 Let's observe the representation of film genres in our resulting dataset.
 
+<!--
 ![1_movie_genre_dist_pie.png](./assets/img/1_movie_genre_dist_pie.png) 
+-->
+
+<iframe src="assets/plot/1_movie_genre_dist_pie.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 The 'drama' genre predominates significantly, while the other genres are fairly balanced among themselves.Now, we will examine the distribution of films across months based on their genres.
 
-TONS OF GRAPHS : WHAT TO DO ?
-
-We observe significantly different distributions among genres. Action films appear to have a relatively uniform distribution throughout the year. It's worth noting that action is the only genre that doesn't experience a decline during the summer, which contradicts the general trend. It's important to mention that for our final word, correlation tests will be considered to confirm whether or not months can have an impact on certain genres
 
 ### 1.1.4. Repartition of the continent
 
 In our dataset, we have a wide range of countries represented. To study the link between location and the distribution of release months, we will group these countries by their continents.
 
+<!--
 ![1_movie_dist_continent_pie.png](./assets/img/1_movie_dist_continent_pie.png) 
+-->
+<iframe src="assets/plot/1_movie_dist_continent_pie.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 The pie chart shows us the proportion of each continent in our dataset. We observe that three continents represent almost the entirety of our dataset, so we will focus on these.
 
