@@ -157,13 +157,28 @@ In this section, we will examine whether there are differences in seasonality be
 
 In this section, we explore the potential presence of seasonality in film releases, considering both genre and location, across time. To do so, we will perform a similar analysis to that in Section 2.1, while distinctly separating genres and locations.
 
-TABLE
-
 <iframe src="assets/plot/distri_month_genre.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 ### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
 
-TABLE 
+| Genre        | Continent      | D Value |
+| ------------ | -------------- | ------- |
+| Action       | Asia           | 0       |
+| Action       | Europe         | 0       |
+| Action       | North America  | 0       |
+| Comedy       | Asia           | 0       |
+| Comedy       | Europe         | 0       |
+| Comedy       | North America  | 0       |
+| Drama        | Asia           | 0       |
+| Drama        | Europe         | 0       |
+| Drama        | North America  | 0       |
+| Romance Film | Asia           | 0       |
+| Romance Film | Europe         | 0       |
+| Romance Film | North America  | 0       |
+| Thriller     | Asia           | 0       |
+| Thriller     | Europe         | 0       |
+| Thriller     | North America  | 0       |
+
 
 It appears that the seasonal patterns within genres and locations remain stable throughout the selected period [1993-2009]. It's worth noting that this period was initially chosen in section 2.3 because the seasonal patterns, encompassing all genres and locations, were stable during that time. This latest analysis simply demonstrates that when we subdivide our dataset by genre and location, any intrinsic patterns within these subdatasets also remain consistent over the same period.
 
