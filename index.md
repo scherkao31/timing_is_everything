@@ -245,7 +245,7 @@ In the graph, the number varies significantly! It is therefore normalized to per
 
 Here is how the movie release months distributed over the years:  
 
-**[Dynamic Graph Here]**
+<iframe src="assets/plot/2_movie_release_months_distributed_over_years.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar.  
 
