@@ -319,7 +319,7 @@ As we can see from the two box plots shown above, there is a significant differe
 USA is the country of most movies in the dataset, and the majority of movies are in English. While the correlation between release month and whether the movie wins an Oscar award is weak, release timing might still be a significant factor influencing the success of the movie. Meanwhile, higher box office revenue, critical acclaim, and audience appreciation influence industry recognition and positively contribute to winning an Oscar award. Other influencing factors include artistic opinions directing the awards designations and differences in categories.
 
 
-#### Transition :
+#### Transition
 
 Alright, film enthusiasts, brace yourselves for a bit of a reality check. Let's face it - are Oscar-winning movies always the ones we enjoy the most? Think about it. We know the superhero blockbusters aren't exactly Oscar bait, but come on, how good was the latest Spiderman? With that in mind, let's shift our focus from the glittering Oscars to the wider world of box office hits and audience favorites. After all, there's more to movie success than just golden statues.
 
@@ -331,9 +331,9 @@ As we continue our quest to discover if a movie's success can be timed, we now t
 
 But that's not the only metric we're considering. We're also looking at how viewers rate movies, another crucial indicator of public opinion.
 
-In this part, we will try to see how the release month of a movie influences its overall success and popularity. We'll examine this through various lenses – box office revenues, viewer votes, and ratings, while also considering how the quality of data documentation has evolved over the years. Let's dive into this multifaceted analysis and see what the numbers reveal about timing and movie success.
+So in this part, we will try to see how the release month of a movie influences its overall success and popularity. We'll examine this through various lenses – box office revenues, viewer votes, and ratings, while also considering how the quality of data documentation has evolved over the years. Let's dive into this multifaceted analysis and see what the numbers reveal about timing and movie success.
 
-In this analysis, we explore the relationship between movie release timing and its success by examining two types of ratings: one, referred to simply as `rating`, is derived from the MovieLens dataset, and the other, known as `Average Vote`, represents the average rating given by viewers on IMDb.
+To do so, we explore the relationship between movie release timing and its success by examining two types of ratings: one, referred to simply as `rating`, is derived from the MovieLens dataset, and the other, known as `Average Vote`, represents the average rating given by viewers on IMDb.
 
 ### 3.1. Ratings Versus Revenue – Does a "bad movie" makes less money than a "better" one ?
 First, let's tackle the correlation between ratings and revenue. It seems intuitive that higher ratings should mean more money, right? Well, our data tells a more nuanced story. We'll explore why movies with mediocre ratings don't necessarily earn less, and how those with top ratings don't always hit the jackpot in terms of revenue. It's a complex equation where excellence in ratings doesn't always translate into box office gold.
@@ -355,39 +355,20 @@ We will now create a "Ratio Revenue" metric that will offer a more insightful pe
 
 <iframe src="assets/plot/3_movie_metrics_evolution.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe> 
 
-The provided line graph depicts the "Ratio Revenue" of movies over a span of approximately three decades. This ratio, as previously discussed, measures each movie's box office revenue against the industry average for its release year. A few key observations can be drawn from this visualization:
+This line graph depicts the "Ratio Revenue" of movies over a span of approximately three decades. This ratio, as previously discussed, measures each movie's box office revenue against the industry average for its release year. A few key observations can be drawn from this visualization:
 
 **Variability Over Time:** The plot shows significant fluctuation in the ratio values year over year. This variability could reflect changes in consumer preferences, the impact of blockbuster releases, or shifts in the movie production landscape.
 
-**Peaks and Troughs:** Notable peaks suggest years when movies performed exceptionally well compared to the annual average, possibly due to the release of highly anticipated films or a smaller number of high-grossing films dominating the box office. Troughs, on the other hand, may indicate years with more evenly distributed revenues or less standout box office hits.
+**Peaks and Troughs:** Notable peaks suggest years when movies performed exceptionally well compared to the annual average.
 
-**Upward Trend in Recent Years:** There appears to be an upward trend in the later years of the graph, especially a sharp rise towards the end. This could signify that the movies in the dataset from those years are, on average, faring much better against the global industry average than in previous years. This might be attributable to a range of factors, including the increasing globalization of movie distribution, advances in marketing, or the rising popularity of franchise films that tend to draw large audiences.
+**Upward Trend in Recent Years:** There appears to be an upward trend in the later years of the graph, especially a sharp rise towards the end. This might be attributable to a range of factors, including the increasing globalization of movie distribution, advances in marketing, or the rising popularity of franchise films that tend to draw large audiences.
 
 **Above-Average Dataset:** As previously mentioned, since the dataset likely contains movies that are above average in terms of box office performance, the ratio values predominantly exceeding 1 align with this expectation. This indicates that the movies in the dataset are not just randomly selected but are skewed towards higher performers.
 
-### 3.2. Timing : month by month
-#### 3.2.1. Box office
-Next, we look at whether there's a link between when a movie is released and the ratings it receives. Does a summer blockbuster get rated differently from a cozy winter flick? Our findings might surprise you, as we unravel the (non)relationship between release months and how viewers rate these films.
+### 3.2. Monthly Momentum: Dissecting Box Office and Ratings Trends
+#### 3.2.1. Rating Breakdown by Months
 
-![](./assets/img/3_ratio_revenu_per_month.png)
-
-The bar graph detailing the "Ratio Revenue" per month showcases that November, not December, records the highest average ratio. This surge in November might be influenced by several factors, including the release of highly-anticipated films aiming to capitalize on Thanksgiving holiday audiences in many countries, as well as strategic positioning for awards season, which often favors late-year releases for better recency in the minds of voters.
-
-Conversely, the lower ratio revenues in the early months of the year, like January and February, might reflect a period commonly referred to in the film industry as the "dump months," when audiences are smaller and the likelihood of releasing high-performing movies is less favorable. This trend is also seen in months like September and October, which typically precede the major releases scheduled for the holiday season, resulting in a lower performance ratio compared to the annual average.
-
-The data suggests a strategic consideration by movie studios to align their major releases with certain peak times of the year, aiming to maximize attendance and revenue. The prominence of November in this dataset underscores its importance as a prime release window for films that are expected to perform well both commercially and critically.
-
-![](./assets/img/3_ratio_revenu_per_month_per_genre.png)
-
-The heatmap provides a nuanced view of how different genres perform across various months. It becomes clear that certain genres have peak months where they significantly outperform others. For instance, the dramatic spike for Drama in November and Action in May and June aligns with the timing of award seasons and summer blockbusters, respectively.
-
-This genre-based seasonal performance can be a critical factor for studios when scheduling movie releases to maximize financial returns. For example, releasing a Romance film in February could capitalize on Valentine's Day, while Action and Adventure films might be strategically placed in summer months to draw in larger audiences during school holidays.
-
-Or if you only follow the data, the way to go is to release a Drama movie in November !
-
-#### 3.2.2. Rating
-
-The bar graph comparing the average vote and ratings by month further confirms the lack of strong seasonal trends in how viewers and critics rate movies. The ratings are relatively even, with no significant spikes or drops that would suggest a particular time of the year when movies are rated more favorably or harshly.
+This bar graph comparing the average vote and ratings by month further confirms the lack of strong seasonal trends in how viewers and critics rate movies. The ratings are relatively even, with no significant spikes or drops that would suggest a particular time of the year when movies are rated more favorably or harshly.
 
 These findings suggest that while box office revenues may have clear seasonal patterns, critical and audience ratings do not seem to be influenced in the same way. This could indicate that while the success of a film's financial returns is strategically planned around certain months, the quality of the film, as judged by viewers and critics, is not necessarily linked to its release date.
 
@@ -395,27 +376,43 @@ Which actually does make sens.
 
 <iframe src="assets/plot/3_monthly_votes_and_ratings.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-The bar graph comparing the average vote and ratings by month further confirms the lack of strong seasonal trends in how viewers and critics rate movies. The ratings are relatively even, with no significant spikes or drops that would suggest a particular time of the year when movies are rated more favorably or harshly.
-
 These findings suggest that while box office revenues may have clear seasonal patterns, critical and audience ratings do not seem to be influenced in the same way. This could indicate that while the success of a film's financial returns is strategically planned around certain months, the quality of the film, as judged by viewers and critics, is not necessarily linked to its release date.
 
 Which actually does make sens.
 
 ![](./assets/img/3_avg_rating_month_genre.png)
 
-The heatmap representing average movie ratings by month and genre suggests that audience preferences and critical reception do not strongly fluctuate throughout the year. While there are some variations, these appear to be minor, and there isn't a clear trend that indicates a particular month consistently yielding higher or lower ratings across genres. This could imply that the quality of movies, as perceived by audiences and critics, is relatively stable over the year, not significantly influenced by seasonal factors.
+The heatmap representing average movie ratings by month and genre suggests that audience preferences and critical reception do not strongly fluctuate throughout the year. 
 
-Drama and Thriller genres show a relatively consistent performance across the months, whereas genres like Action and Comedy exhibit some variability. However, this variability doesn't seem to follow a predictable seasonal pattern. This could mean that moviegoers' appreciation of films is more influenced by the films' content and quality rather than the time of the year they are released.
+#### 3.2.2. Box Office Breakdown by Months
+
+We look at whether there's a link between when a movie is released and the ratings it receives. Does a summer blockbuster get rated differently from a cozy winter flick? Our findings might surprise you, as we unravel the (non)relationship between release months and how viewers rate these films.
+
+![](./assets/img/3_ratio_revenu_per_month.png)
+
+The bar graph detailing the "Ratio Revenue" per month showcases that November, not December, records the highest average ratio. This surge in November might be influenced by several factors, including the release of highly-anticipated films aiming to capitalize on Thanksgiving holiday audiences in many countries, as well as strategic positioning for awards season, which often favors late-year releases for better recency in the minds of voters.
+
+Conversely, the lower ratio revenues in the early months of the year, like January and February, might reflect a period commonly referred to in the film industry as the "dump months," when audiences are smaller and the likelihood of releasing high-performing movies is less favorable. This trend is also seen in months like September and October, which typically precede the major releases scheduled for the holiday season, resulting in a lower performance ratio compared to the annual average.
+
+The data suggests a strategic consideration by movie studios to align their major releases with certain peak times of the year, aiming to maximize attendance and revenue.
+
+![](./assets/img/3_ratio_revenu_per_month_per_genre.png)
+
+This heatmap provides a nuanced view of how different genres perform across various months. It becomes clear that certain genres have peak months where they significantly outperform others. For instance, the dramatic spike for Drama in November and Action in May and June aligns with the timing of award seasons and summer blockbusters, respectively.
+
+This genre-based seasonal performance can be a critical factor for studios when scheduling movie releases to maximize financial returns. For example, releasing a Romance film in February could capitalize on Valentine's Day, while Action and Adventure films might be strategically placed in summer months to draw in larger audiences during school holidays.
+
+Or if you only follow the data, the way to go is to release a Drama movie in November !
 
 
-### 3.3. Season per season
-#### Ratings
+### 3.3. How about the seasons ?
+#### 3.3.1. Critic's Calendar: Evaluating Ratings Across Seasons
 
 <iframe src="assets/plot/3_seasonal_votes_and_ratings.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
-The histogram depicting average vote averages and ratings by season does not show significant variations between the different times of the year. This suggests that, much like the monthly ratings, the season in which a movie is released does not have a major impact on how it is rated by audiences or critics. Ratings remain relatively consistent from season to season, which indicates a stable reception of film quality irrespective of seasonal release timing.
+The histogram analyzing average votes and ratings by season reveals a steady pattern, with no substantial shifts in how movies are rated throughout the year. This consistency implies that a film's release season doesn't significantly sway audience or critical perception. Ratings appear to be stable, regardless of whether a film debuts in spring or winter, suggesting that the intrinsic quality of a film—determined by its content, production caliber, and promotional strategies—plays a more crucial role in shaping its reception than the timing of its release.
 
-This could mean that the perceived quality of movies is not tied to the seasonal context of their release. Instead, it may be more heavily influenced by the content and production value of the movies themselves, as well as the marketing efforts put forth by studios.
+This observation aligns with the viewer experience; after all, a movie is often rated by viewers long after its initial release, without the seasonal context of its debut influencing their judgment.
 
 #### Box office
 
@@ -432,6 +429,33 @@ The significant disparity in ratio revenue between seasons suggests that while t
 The second heatmap, focusing on average box office revenue by season and genre, illustrates a more pronounced seasonal impact on financial performance. Action and Romance films show higher ratio revenues in Autumn and lower in Spring, indicating that these genres perform better in the box office during the latter part of the year. Thriller movies also perform well in Autumn, possibly due to the genre's association with Halloween.
 
 The considerable variance in box office ratio revenue by season for different genres suggests that audience spending habits are influenced by the time of year, perhaps due to holiday periods, seasonal marketing strategies, or weather-related behavioral changes. For instance, Summer shows to be a strong season for Action movies, likely due to the popularity of summer blockbusters.
+
+
+## Propensity Score Estimation: 
+
+To delve deeper into resolving our central dilemma, we will now conduct a thorough analysis to determine how a movie's release month impacts its popularity by calculating propensity scores based on factors like genre, runtime, country, and release year, using logistic regression to model the likelihood of a film's release in a particular month. We then employ nearest-neighbor matching to form comparable groups for each release month, enabling more meaningful comparisons. The Average Treatment Effect (ATE) for each month is calculated by comparing the average votes and ratings between movies released in that month (the treatment group) and those not released in that month (the control group). This detailed approach allows us to uncover the nuanced effects of release timing on a movie's popularity.
+
+| Month      | ATE Votes      | ATE Ratings   |
+|------------|----------------|---------------|
+| January    | -7413.056614   | -0.020796     |
+| February   | -4036.678596   | -0.053162     |
+| March      | -746.548258    | -0.018964     |
+| April      |  971.221314    | -0.011769     |
+| May        |  4329.514253   |  0.029846     |
+| June       |  4811.658418   | -0.035587     |
+| July       |  5038.932812   | -0.038047     |
+| August     |  1445.506012   | -0.030679     |
+| September  |  1979.354775   |  0.149349     |
+| October    | -4794.863486   | -0.027556     |
+| November   | -663.190941    |  0.037936     |
+| December   |  6810.117530   |  0.051232     |
+
+Key Takeaways:
+
+Films released in May, June, July, September, November, and December are more popular, getting more votes.
+The highest boost in ratings is seen for films debuting in September and December.
+Movies released in January, February, March, and October aren't as popular, with fewer votes and lower ratings.
+This study highlights that when a movie is released can really impact how well it does.
 
 #### Conlusion and nuances
 
@@ -451,93 +475,6 @@ The considerable variance in box office ratio revenue by season for different ge
 - **Need for Further Investigation**:
   - More research is needed to distinguish between the effects of seasonal appeal and strategic release timing by production companies.
   - Further analysis could include marketing spend and audience demographics to understand the drivers behind seasonal box office success.
-
-## Propensity Score Estimation: 
-
-We are diving into a comprehensive analysis of how a movie's release month affects its popularity. First, we estimate propensity scores, representing the likelihood of release in a specific month based on genre, runtime, country, and release year. Each month is treated as a binary "treatment," and logistic regression helps us model this.
-
-Moving on, we use these propensity scores for nearest-neighbor matching, creating comparable groups for each release month. This meticulous process ensures meaningful comparisons. We then delve into effect estimation, comparing the average number of votes and ratings between matched movies in the treatment (e.g., January) and control (non-January) groups for each month.
-
-The story unfolds with the completion of nearest-neighbor matching for each release month, emphasizing precision in our comparisons. Now, we're set to calculate the Average Treatment Effect (ATE), unveiling the impact of release month on votes and ratings. This iterative approach allows us to draw nuanced insights, acknowledging the diversity of effects across various months. Let's unlock the cinematic secrets hidden in the data.  
-
-The ATE will be calculated as follows for each month:  
-- The treatment group (released in a specific month)  
-- The matched control group (not released in that month)    
-
-ATE = Average in the treatment group - Average in the control group  
-
-| Month      | ATE Votes      | ATE Ratings   |
-|------------|----------------|---------------|
-| January    | -7413.056614   | -0.020796     |
-| February   | -4036.678596   | -0.053162     |
-| March      | -746.548258    | -0.018964     |
-| April      |  971.221314    | -0.011769     |
-| May        |  4329.514253   |  0.029846     |
-| June       |  4811.658418   | -0.035587     |
-| July       |  5038.932812   | -0.038047     |
-| August     |  1445.506012   | -0.030679     |
-| September  |  1979.354775   |  0.149349     |
-| October    | -4794.863486   | -0.027556     |
-| November   | -663.190941    |  0.037936     |
-| December   |  6810.117530   |  0.051232     |
-
-Key Observations:
-
-- Movies released in May, June, July, September, November, and December tend to attract a higher number of votes, indicating greater popularity.
-  
-- The most significant increase in ratings is observed for movies released in September and December.
-  
-- Conversely, movies released in January, February, March, and October show a decline in both votes and ratings, suggesting lower popularity and reduced critical reception on average.
-
-Overall, this analysis sheds light on how the timing of a movie's release can significantly influence its success and popularity.  
-
-Based on the ATE data for votes and ratings across genres (Drama, Comedy, Thriller, Action, Romance Film), the key findings are:
-
-**Drama Genre:**  
-
-- Positive ATE in votes for April, September, November, and December, indicating higher popularity.  
-- Negative ATE in votes for May and June, suggesting lower popularity.  
-- Ratings show a general increase, especially in September and December.  
-
-**Comedy Genre:**  
-
-- Mixed ATE pattern for votes, with significant increases in April and December, and decreases in months like May and July.  
-- Ratings peak in December but decline in other months such as April and May.  
-
-**Thriller Genre:**
-
-- Varied ATE for votes, with negatives in January, March, and October, and positives in June, September, and December.  
-- Ratings are highest in December, with notable declines in February and July.  
-
-**Action Genre:**
-
-- Negative ATE trend in votes early in the year and a positive trend towards the end, especially in June and September.  
-- Ratings fluctuate, with the highest increase in December and significant drops in February and July.  
-
-**Romance Film Genre:**  
-
-- ATE for votes indicates lesser popularity for most months, except for April and May.  
-- Ratings are generally low with exceptions, such as an increase in March and December.  
-
-### General Conclusions:  
-
-- Seasonality: Each genre exhibits distinct seasonal patterns in both popularity (votes) and critical reception (ratings).  
-- Popularity Peaks: Genres like Drama and Comedy fare better in votes towards the latter part of the year.  
-- Ratings Variability: Ratings fluctuate significantly across months and genres, with some genres experiencing their highest ratings towards the end of the year.  
-- Strategic Release Timing: Insights suggest that strategic timing for movie releases, tailored to the genre, can be crucial for maximizing success and reception.
-
-
-##### Conclusions
-1- The IMDB dataset, with its higher vote counts, is more robust for analyzing movie popularity than the CMU dataset.  
-
-2- Merged data show no missing ratings, allowing for a reliable analysis of movie ratings' distribution, which centers around a mean of 6.3.  
-
-3- Monthly variations in the number of votes are more pronounced than in ratings, suggesting that movies can achieve widespread attention regardless of high ratings.  
-
-4- Seasonal trends show higher box office revenues during the summer and end-of-year holidays, aligning with typical blockbuster release schedules.  
-
-5- The highest-grossing movies have ratings around the mean, implying that exceptional ratings do not necessarily equate to financial success.  
-
 _______________________________________________________________
 
 # Conclusion
