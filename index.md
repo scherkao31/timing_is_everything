@@ -258,78 +258,35 @@ Let us first plot the box office revenue of movies based on whether they receive
 
 ![Oscar_Box](./assets/img/Oscar_Box.png)
 
-Mean Box Office Revenue (Oscar Winners): $141.49 million  
-Standard Deviation Box Office Revenue (Oscar Winners): $274.32 million  
+|                                   | Mean Box Office Revenue | Standard Deviation Box Office Revenue |
+|-----------------------------------|------------------------|---------------------------------------|
+| Oscar Winners                     | $141.49 million       | $274.32 million                       |
+| Non-Winners                       | $94.29 million        | $164.44 million                       |
+  
 
-Mean Box Office Revenue (Non-Winners): $94.29 million  
-Standard Deviation Box Office Revenue (Non-Winners): $164.44 million  
+The difference in Mean Box Office Revenue between Winners and Non-Winners: <ins>$47.20 million</ins>.  
 
-The difference in Mean Box Office Revenue between Winners and Non-Winners: $47.20 million  
 
-As shown by the box plot and the statistics of our movies' box office revenues, we can see that the average and median box office revenue of movies that received an Oscar is higher than the average box office revenue of movies that did not receive an Oscar. We also notice that the standard deviation of the box office revenue of movies that received an Oscar is much higher than for those that did not, indicating more variability in this category.  
+The analysis reveals that movies receiving Oscars tend to have higher average and median box office revenues compared to non-Oscar winners, with a significantly higher standard deviation indicating greater revenue variability. A Welch's t-test confirms a substantial difference, supported by a low p-value of 0.0005. Correlation analysis further indicates a positive correlation (coefficient of 0.09) between box office revenue and the number of Oscars won, with a p-value of 0.0005.
 
-Indeed, if we compare the differences between the highest and lowest-grossing movies that have received an Oscar, we notice a huge difference as shown below. Movies such as "The Times of Harvey Milk" received the Oscars for Best Documentary Feature in 1984 with a box office revenue of 29,802 USD, while movies such as "Avatar" received the Oscars for Art Direction in 2009 with a box office revenue of 2,782,275,172 USD. This indicates that the Oscars Awards do not necessarily reflect the success of a movie, which can often be the case for movies that are not blockbusters.  
-
-To test whether the difference in box office revenue is statistically significant, we will perform a Welch's t-test. This test is used to test the null hypothesis that two populations have equal means. It is an adaptation of the Student's t-test and is more reliable when the two samples have unequal variances and unequal sample sizes.  
-
-The key findings of this analysis are as follows:  
-
-1) T-test Results:  
-
-- T-test statistic: 3.49  
-- T-test p-value: 0.0005  
-
-Conclusion: The t-test results reveal a substantial difference in box office revenue between movies that received Oscars and those that did not. The low p-value of 0.0005 indicates a high level of statistical significance. This suggests that the observed difference in box office revenue is unlikely to have occurred by random chance.  
-
-2) Correlation Analysis:  
-
-- Correlation coefficient: 0.09  
-- Correlation p-value: 0.0005  
-
-Conclusion: The correlation analysis indicates a significant positive correlation (coefficient of 0.09) between box office revenue and the number of Oscars won. The low p-value of 0.0005 reinforces the statistical significance of this positive correlation. Therefore, higher box office revenue is associated with an increased likelihood of receiving Oscars.  
-
-Our analysis provides compelling evidence supporting a clear relationship between box office success and Oscar recognition. The statistically significant t-test results affirm that movies with Oscars differ significantly in terms of box office revenue from those without Oscars. Additionally, the positive correlation observed further emphasizes that higher box office revenue is positively linked to an increased likelihood of receiving Oscars. This underscores the influential role of commercial success in garnering industry acclaim and recognition.  
-
-However, as we have shown previously, it is important to notice that the Oscars do not necessarily reflect the success of a movie. Indeed, the Oscars can be awarded to movies that are not blockbusters. This is why we will now look at the ratings of the movies in our dataset to see if they are correlated with the Oscars.  
+In summary, the statistical findings suggest a strong link between box office success and Oscar recognition. While the positive correlation underscores the influence of commercial success on receiving Oscars, it's important to note that Oscars don't guarantee a blockbuster, as evidenced by varied box office revenues for winners. This prompts further exploration into movie ratings to assess their correlation with the Oscars.
 
 ## 2.6 Ratings
 
 We will now conduct a similar analysis to the one we performed for box office revenue, but this time for ratings. We will start by plotting the ratings of movies based on whether they received an Oscar or not.  
 
+|                                   | Mean Vote | Standard Deviation Vote |
+|-----------------------------------|-----------|-------------------------|
+| Oscar Winners                     | 6.89       | 0.92                       |
+| Non-Winners                       | 6.59       | 0.92                       |
 
-Mean Average Vote (Oscar Winners): 6.89  
-Standard Deviation Average Vote (Oscar Winners): 0.92  
+The difference in Mean Average Vote between Winners and Non-Winners: <ins>0.29</ins>.  
 
-Mean Average Vote (Non-Winners): 6.59  
-Standard Deviation Average Vote (Non-Winners): 0.92  
+The analysis demonstrates that Oscar-winning movies tend to have higher average and median ratings compared to non-Oscar winners, with a significantly higher standard deviation, indicating greater variability in ratings. A Welch's t-test confirms a substantial difference, supported by an extremely low p-value of 8.99e-09. Correlation analysis further indicates a positive correlation (coefficient of 0.12) between average ratings and the likelihood of winning an Oscar, with an extremely low p-value of 8.99e-09.  
 
-The difference in Mean Average Vote between Winners and Non-Winners: 0.29  
+In summary, the statistical findings suggest a strong link between average ratings and Oscar recognition. The t-test underscores the significant difference in average ratings for movies with and without Oscars, while the positive correlation emphasizes that higher average ratings increase the likelihood of winning Oscars. This highlights the importance of critical acclaim and audience appreciation in influencing industry recognition.  
 
-Once again, we can see that movies that received an Oscar have a higher average and median rating than movies that did not receive an Oscar. We also notice that the standard deviation of the ratings of movies that received an Oscar is higher than for those that did not, indicating more variability in this category, as noticed for the box office revenue.
-
-To test whether the difference in ratings is statistically significant, we once again performed a Welch's t-test.  
-
-The key findings of this analysis are as follows:  
-
-1) T-test Results:  
-
-- T-test statistic: 5.77  
-- T-test p-value: 8.99e-09  
-
-Conclusion: The t-test results indicate a substantial difference in average ratings between movies that won Oscars and those that did not. The extremely low p-value of 8.99e-09 underscores the high level of statistical significance. This implies that the observed disparity in average ratings is highly unlikely to have occurred by random chance.  
-
-2) Correlation Analysis:  
-
-- Correlation coefficient: 0.12  
-- Correlation p-value: 8.99e-09  
-
-Conclusion: The correlation analysis reveals a significant positive correlation (coefficient of 0.12) between average ratings and the likelihood of winning an Oscar. The extremely low p-value of 8.99e-09 emphasizes the statistical significance of this positive correlation. Therefore, higher average ratings are associated with an increased likelihood of winning the Oscars.  
-
-In Summary:  
-
-Our analysis provides compelling evidence supporting a clear relationship between average ratings and Oscar recognition. The statistically significant t-test results affirm that movies with Oscars differ significantly in terms of average ratings from those without Oscars. The positive correlation observed further indicates that higher average ratings are positively linked to an increased likelihood of winning the Oscars. This underscores the importance of critical acclaim and audience appreciation in influencing industry recognition.  
-
-Associated with our analysis of box office revenue, this statistical test and the measures of our ratings prove once again the importance of a movie's sucess in its likelihood of receiving awards. However, as we have shown previously, it is important to notice that the movies that have received Oscars can divert from these assumptions, receiving low ratings and box office revenue. This is mostly due to artistic opinions directing the awards designations, which can be very different from the public opinion, as well as categories. Movies such as documentaries or foreign ones are often less likely to gross high revenues or receive high ratings, but can still be awarded Oscars. We show these deviations in the following section.  
+Echoing the box office revenue analysis, these results emphasize the impact of a movie's success on its likelihood of receiving awards. However, it's crucial to acknowledge deviations, as movies with Oscars may receive low ratings and box office revenue, driven by artistic opinions influencing awards designations. Categories like documentaries or foreign films may deviate from traditional success metrics but still garner Oscars, showcasing the diverse nature of industry recognition.
 
 ![Oscar_Category_Box](./assets/img/Oscar_Category_Box.png)
 ![Oscar_Vote_Box](./assets/img/Oscar_Vote_Box.png)
