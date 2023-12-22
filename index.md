@@ -351,10 +351,8 @@ In simple terms, if we think of a movie's rating as a measure of quality and the
 
 #### Adjusting Box Office Figures: The Revenue Ratio Approach
 
-We will now create a "Ratio Revenue" metric that will offer a more insightful perspective on a movie's financial success relative to its industry context. By dividing a movie's box office revenue by the average box office value of its release year, you normalize the data, allowing for a fair comparison across different years. This is crucial because it accounts for varying factors like inflation, changes in ticket prices, and market expansion over time.
-
+We will now create a "Ratio Revenue" metric that will offer a more insightful perspective on a movie's financial success relative to its industry context. By dividing a movie's box office revenue by the average box office value of its release year, we allow a fair comparison across different years. This is crucial because it accounts for varying factors like inflation, changes in ticket prices, and market expansion over time.
 <iframe src="assets/plot/3_movie_metrics_evolution.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe> 
-
 This line graph depicts the "Ratio Revenue" of movies over a span of approximately three decades. This ratio, as previously discussed, measures each movie's box office revenue against the industry average for its release year. A few key observations can be drawn from this visualization:
 
 **Variability Over Time:** The plot shows significant fluctuation in the ratio values year over year. This variability could reflect changes in consumer preferences, the impact of blockbuster releases, or shifts in the movie production landscape.
