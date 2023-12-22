@@ -78,7 +78,11 @@ Let's now investigate the possibility of seasonality in film releases, regardles
 
 We conduct a thorough analysis with the aim of predicting the percentage of films released each year during a specific month.
 
+<!--
 ![1_mean_percent_release_month_histo.png](./assets/img/1_mean_percent_release_month_histo.png) 
+-->
+
+<iframe src="assets/plot/1_mean_percent_release_month_histo.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 Upon examining this plot, we observe that the percentage of film releases per month is not evenly distributed throughout the year. This leads us to increasingly consider the hypothesis that there may be seasonality in film releases over the course of the year. However, we must exercise caution with this type of analysis because it's possible that if there is any seasonality in film releases, it may not have been consistent over time. For example, there might have been a pattern in the last 10 years, such as fewer film releases in July, but this may not have been the case in earlier years.
 
