@@ -108,7 +108,6 @@ An autocorrelation plot, or autocorrelogram, is a vital tool in time series anal
 <iframe src="assets/plot/1_autocorrelation_graph.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 -->
 
-![1_autocorrelation_graph.png](./assets/img/1_autocorrelation_graph.png)
 
 #### Analysis of the Autocorrelation plot:
 
