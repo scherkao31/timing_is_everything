@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: page
 title: Is timing everything ?
 subtitle: A Data-Driven Dive into Movie Release Strategies and Success
 cover-img: /assets/img/season_movie.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/path.jpg
-author: Léa, Pierre-Hadrien, Yanruiqi, Jason and Salim
+use-site-title: true
 ---
 
 Sometimes, despite having all the pieces in place and doing everything right, success seems elusive. It's often a game of patience. Hard work is undoubtedly a significant factor in achieving success, but there's another crucial element at play – timing. It's about being in the right place at the right moment, seizing opportunities as they arise, and connecting with others at just the right time.
