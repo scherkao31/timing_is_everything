@@ -162,8 +162,6 @@ In this section, we explore the potential presence of seasonality in film releas
 ### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
 
 <br>
-<br>
-<br>
 
 <div align="center">
 
