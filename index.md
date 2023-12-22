@@ -466,6 +466,7 @@ Movies released in January, February, March, and October aren't as popular, with
 - **Need for Further Investigation**:
   - More research is needed to distinguish between the effects of seasonal appeal and strategic release timing by production companies.
   - Further analysis could include marketing spend and audience demographics to understand the drivers behind seasonal box office success.
+    
 _______________________________________________________________
 
 # A happy ending ?
