@@ -483,7 +483,7 @@ In our journey through the intricate world of movie release strategies and succe
 
 - **Ratings vs. Revenue:** Our analysis has shown that high ratings do not always guarantee high revenues and vice versa. This dichotomy between critical acclaim and commercial success underscores the multi-faceted nature of a film's success.
 
--** Seasonal and Genre Trends: **The interplay between movie genres and seasons reveals fascinating insights. Each genre has its season, and understanding this could be crucial for filmmakers and marketers aiming for box office success.
+- **Seasonal and Genre Trends:** The interplay between movie genres and seasons reveals fascinating insights. Each genre has its season, and understanding this could be crucial for filmmakers and marketers aiming for box office success.
 
 In summary, our exploration into the CBU movie dataset has not only highlighted the significant role of timing in a film's success but also underscored the complexity of factors at play. From genre-specific seasonal trends to the intricate dance with award seasons and box office revenues, timing emerges as a crucial, though not solitary, player in the success story of a film. 
 
