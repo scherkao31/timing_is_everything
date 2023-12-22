@@ -414,7 +414,7 @@ The histogram analyzing average votes and ratings by season reveals a steady pat
 
 This observation aligns with the viewer experience; after all, a movie is often rated by viewers long after its initial release, without the seasonal context of its debut influencing their judgment.
 
-#### Box office
+#### 3.3.2. Popularity Calendar: Evaluating Box Office Across Seasons
 
 In contrast to the stable ratings, the bar graph on average adjusted revenue by season reveals a different story. There are clear differences in box office performance with respect to the season. Summer stands out as the season with the highest average adjusted revenue, which aligns with the traditional blockbuster season when studios release their big-budget and highly anticipated movies to capture the larger audience available during school holidays.
 
@@ -477,11 +477,22 @@ This study highlights that when a movie is released can really impact how well i
   - Further analysis could include marketing spend and audience demographics to understand the drivers behind seasonal box office success.
 _______________________________________________________________
 
-# Conclusion
+# A happy ending ?
 
-Summary, and conclusion.
-<iframe src="assets/plot/distribution_ethnicity.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+In our journey through the intricate world of movie release strategies and success, we've uncovered the profound impact of timing in the film industry. "Is Timing Everything?" has delved deep into the complex relationship between when a movie is released and its subsequent success, weaving through data-driven analyses and revealing patterns that could potentially reshape how we perceive movie scheduling and its outcomes.
 
-Deuxième : 
+**Key Insights:**
 
-<iframe src="assets/plot/plot.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+- Seasonal Synchrony with Genres: We've seen how movie genres dance with the calendar, finding their unique rhythms across seasons. The release timing of a film is more than just a date; it's a strategic decision that aligns with audience expectations and cultural moments.
+
+- Oscar Timing: Delving into the glamorous realm of the Oscars, we've discovered that the timing of a release can be pivotal in a film's journey to award success. While other factors undoubtedly play a role, the strategic release of movies, particularly towards the end of the year, appears to increase their Oscar prospects.
+
+- Box Office Revelations: The correlation between box office success and release timing is undeniable. Certain months, like November and December, emerge as favorable for maximizing financial returns, reflecting a blend of holiday seasons and award timings.
+
+- Ratings vs. Revenue: Our analysis has shown that high ratings do not always guarantee high revenues and vice versa. This dichotomy between critical acclaim and commercial success underscores the multi-faceted nature of a film's success.
+
+- Seasonal and Genre Trends: The interplay between movie genres and seasons reveals fascinating insights. Each genre has its season, and understanding this could be crucial for filmmakers and marketers aiming for box office success.
+
+In summary, our exploration into the CBU movie dataset has not only highlighted the significant role of timing in a film's success but also underscored the complexity of factors at play. From genre-specific seasonal trends to the intricate dance with award seasons and box office revenues, timing emerges as a crucial, though not solitary, player in the success story of a film. 
+
+**Our story concludes with a realization:** in the world of cinema, as in life, timing is indeed everything. It's about capturing the right moment, understanding your audience, and harmoniously aligning with the cultural and seasonal milieu. This intricate dance of timing, content, and audience is what makes the movie industry a fascinating realm of endless possibilities and discoveries.
