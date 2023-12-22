@@ -218,69 +218,57 @@ _______________________________________________________________
 
 Now, as we roll out the red carpet, it's time to see how timing influences a movie's journey to Oscar glory. Is there a 'golden month' for releasing a film that could increase its chances of capturing that coveted golden statue? In this part of our exploration, we will try to see which factors impact a movie's success, especially in terms of its likelihood to win an Oscar. Does release timing play a crucial role, and has its effect evolved over time? We're also going to delve into whether it's possible to predict a film's Oscar odds based on various factors, including its release month, the country of origin, language, and more. Let's discover the intricate dance between the calendar and the Oscars.  
 
-### 2.1 Overview
-There is no shortcut to win the crown. However, good timing makes an easier way! We can sometimes observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). Directed by Paul Haggis, it won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10.  
+## 2.1 Overview
+There is no shortcut to win the crown. However, good timing makes an easier way!  
 
-Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize. We first have a look at how the movies with different release months are distributed in the Oscar selection.  
+We can sometimes observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). Directed by Paul Haggis, it won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10.  
 
-![Release_Month_Distribution](./assets/img/Release_Month_Distribution.png)  
+Do you know, that only **17.35%** nominated movies successfully take home Oscar awards! As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize.  
 
-The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar. For example, why movies released in December are significantly more than in other months?  
+First, we need to exclude the influence of significant confounders. 
 
-### 2.2 Level I: Entry to Oscar selection
-As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. Due to the fierce competition for final awards, many good movies cannot eventually get the Oscar prize, but getting selected as Oscar candidates is also an amazing achievement. Therefore, directors holding films with aspirations for the Oscar awards want to ask, if an optimal release timing can help them to win in the Oscar selection more easily. Generally, we can inspect the ratios of selection in each month. To view the results more clearly, we run a k-means clustering for release months.  
+**Locations:**  
+As the Academy of Motion Picture Arts and Sciences is located in the USA, it is doubtful that movies from other countries are underrepresented in the dataset. We can first check the locations distribution of the movies. For simplicity, we investigate it per continent.
 
-![Selection_Kmeans](./assets/img/Selection_Kmeans.png)
+![Continent_Distribution](./assets/img/Continent_Distribution.png) 
 
-From the graph, the optimal timings for entering Oscar selection are December and June, while movies released from January to April are harder to win the favor of the judges.
+Yes, the movies selected for the Oscar prize are mainly from North America, and we have very limited data for movies from other continents. If data on movies winning other awards is included later, like the César Awards (Europe), Asian Film Awards (AFA), Premios Platino, African Movie Academy Awards (AMAA), and Australian Academy of Cinema and Television Arts Awards (AACTA). To control the confounder, we focus now only on North American movies. 
 
-### 2.3 Level II: Oscar Winner
-Do you know, that only **17.35%** nominated movies successfully take home Oscar awards! And thinking about the low selection ratio, winners need not only good quality films but also some good luck.  
+**Release Year:**  
+Intuitively, the number of movies released each year is very different. This is also true for the number of nominated movies. If we consider movies released in different years as a whole, it could introduce bias in our conclusion. How many movies are selected for the Oscar prize each year?
 
-If a director has produced a film expected to be highly praised and is confident that this movie can be selected for Oscar grading for sure, when is the optimal timing in this case? Is it the same as timing for Level I players? We investigated it by clustering the winning ratio in the Oscar selection dataset.  
+![Oscar_Histogram.png](./assets/img/Oscar_Histogram.png.png) 
 
-![Win_Kmeans](./assets/img/Win_Kmeans.png)  
+In the graph, the number varies significantly! It is therefore normalized to percentage and averaged over the years.
 
-The results reveal that the optimal timing is shifted to January and May, and December is now a very bad choice, only better than June and July.  
+![Oscar_Distribution.png](./assets/img/Oscar_Distribution.png) 
 
-How does the winning probability change over the years?  
+The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar. 
 
-[Dynamic Graph: Oscar Probability over Years]  
+## 2.2 Period-wise Timing Study
 
-![Oscar_Probability_over_Years](./assets/img/Oscar_Probability_over_Years.png)
+The era is changing, and patterns that were useful 50 years ago may no longer hold. Therefore, it's necessary to divide the movies into subgroups according to their release period. Three periods depict them very well.
 
-### 2.4 Confounders: Locations and Languages
-Except for the timing, other factors may influence the winning probability as well. Here, we can take locations and languages into account.  
+![Period_Distribution.png](./assets/img/Period_Distribution.png) 
 
-We first check their percentage in the selected movies dataset.  
-![Movie_Countries_Selected](./assets/img/Movie_Countries_Selected.png)
-![Movie_Languages_Selected](./assets/img/Movie_Languages_Selected.png)
+The similarity of the effects from different release months can be discovered by K-means clustering on the results.
 
-Then, for the winners:
-![Movie_Countries_Win](./assets/img/Movie_Countries_Win.png)
-![Movie_Languages_Win](./assets/img/Movie_Languages_Win.png)
+![Win_Kmeans](./assets/img/Win_Kmeans.png) 
 
-They show the phenomenon that US movies and English movies take a predominant majority because they are mostly overlapping. We therefore assume that the influence of languages can be covered in location influence. For simplicity, we convert the countries to continents. 
+We can see that the timing for release has changed a lot over the years. In the early period (Period 1), the later you release the movie, the better chance that movie can win an Oscar award. However, this is no longer true after 1960. December is an absolute best time. The suboptimal timing was September, but May, June, and November became a good time to release movies after the 1980s. 
 
-![Win_Possibility_per_Continent](./assets/img/Win_Possibility_per_Continent.png)
+## 2.3 Limitation: Weak Correlation
 
-It presents that the most intense competition happens in North American movies. Even though their number is large in absolute value, it is never easy for them to win Oscar awards. In contrast, each Oceanian movie selected has a 40% winning probability.  
+In our ongoing analysis, the next step involves examining the correlation between winning an award and the timing of a movie's release. Since 'Release Month' is a categorical variable, and 'Winner' is binary, we opt for Cramér's V, a statistic tailored for measuring the association between two categorical variables, treating a binary feature as a special categorical attribute. This statistical measure, grounded in the chi-squared statistic, produces a Cramér's V of 0.04. 
 
-Based on this, we suggest that **common** North American directors, with the wish to win Oscar prizes, should generally consider releasing new movies in January and May. For **common** Australian directors, they should release the films in December and June.
+This value indicates a weak correlation between 'Release Month' and 'Winner,' suggesting that the month of release alone does not exert a strong influence on Oscar outcomes. It becomes evident that other elements of a movie, beyond its release timing, play pivotal roles. This aligns with the rationale that a movie's success in securing an Oscar is not solely determined by an optimal release timing; rather, it involves a complex interplay of various factors, underscoring the importance of considering multiple aspects of a film in our analysis.
 
-As a detailed exploration, we run clustering on the continental subsets to evaluate the chance of winning an Oscar after the nomination. 
+**Key Findings:**
+- In the early days, movies released later are always advantageous.
+- In the 1950s, December became the best time to release movies, and September was the suboptimal release month.
+- After the 1980s, May, June, and November joined the suboptimal time.
 
-![Continent_Clustering](./assets/img/Continent_Clustering.png)
-
-Then we can advise **successful directors** who promise to have Oscar-selected movies: 
-- for American and European movies, the general suggestion in Level II  (January) still holds.
-- despite the limited data, we are reluctant to say that, for Asian movies, the optimal timings are March, August, and November, while for Oceanian movies November is the only best time
-- for African and South American movies, we cannot conclude anything without extra data.
-
-Intuitively, this is shown in the heat map below.
-![Oscar_Heatmap](./assets/img/Oscar_Heatmap.png)
-
-## 2.5 Box Office Revenue
+## 2.4 Box Office Revenue
 
 To continue our analysis of research question 2, we now delve into the other factors impacting a movie's success. We start by looking at the box office revenue of the movies in our dataset. Our insight leads us to believe that higher box office revenues are correlated with a higher probability of winning an Oscar, which we will test via statistical analysis.  
 
@@ -296,12 +284,11 @@ Let us first plot the box office revenue of movies based on whether they receive
 
 The difference in Mean Box Office Revenue between Winners and Non-Winners: <ins>$47.20 million</ins>.  
 
-
 The analysis reveals that movies receiving Oscars tend to have higher average and median box office revenues compared to non-Oscar winners, with a significantly higher standard deviation indicating greater revenue variability. A Welch's t-test confirms a substantial difference, supported by a low p-value of 0.0005. Correlation analysis further indicates a positive correlation (coefficient of 0.09) between box office revenue and the number of Oscars won, with a p-value of 0.0005.
 
 In summary, the statistical findings suggest a strong link between box office success and Oscar recognition. While the positive correlation underscores the influence of commercial success on receiving Oscars, it's important to note that Oscars don't guarantee a blockbuster, as evidenced by varied box office revenues for winners. This prompts further exploration into movie ratings to assess their correlation with the Oscars.
 
-## 2.6 Ratings
+## 2.5 Ratings
 
 We will now conduct a similar analysis to the one we performed for box office revenue, but this time for ratings. We will start by plotting the ratings of movies based on whether they received an Oscar or not.  
 
@@ -323,9 +310,10 @@ Echoing the box office revenue analysis, these results emphasize the impact of a
 
 As we can see from the two box plots shown above, there is a significant difference in box office revenue and ratings between movies that received Oscars based on their category. Movies with Oscars such as Best Actress (in general) or Best Documentary generally received lower box office revenue and ratings than movies with Oscars such as Best Short Film or Actor. We also notice that the best documentary categories showcase an especially high variability in box office revenue and ratings, which is not the case for the best short film category. All these features indicate thus once again the biases that can be shown in the Oscars awards, which are not always correlated with the success of a movie, even though on a general basis, the Oscars are awarded to movies that have a higher box office revenue and ratings.  
 
-#### **Conclusion:** 
+## **Conclusion:** 
 
-USA is the country of most movies in the dataset, and the majority of movies are in English. While the correlation between release month and whether the movie wins an Oscar award is weak, release timing might still be a significant factor influencing the success of the movie. 
+USA is the country of most movies in the dataset, and the majority of movies are in English. While the correlation between release month and whether the movie wins an Oscar award is weak, release timing might still be a significant factor influencing the success of the movie. Meanwhile, higher box office revenue, critical acclaim, and audience appreciation influence industry recognition and positively contribute to winning an Oscar award. Other influencing factors include artistic opinions directing the awards designations and differences in categories.
+
 
 #### Transition :
 
