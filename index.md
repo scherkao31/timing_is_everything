@@ -102,10 +102,11 @@ An autocorrelation plot, or autocorrelogram, is a vital tool in time series anal
 - **Significant Peaks**: A peak in the autocorrelogram at a specific lag indicates significant autocorrelation at that lag. Peaks beyond the confidence bounds suggest statistically significant autocorrelation.
 
 - **Seasonality and Temporal Dependence**: Regular peaks at multiples of a specific period indicate seasonality. For example, annual peaks in monthly data would appear every 12 months, revealing a yearly seasonal trend.
-<!--
 ![1_autocorrelation_graph.png](./assets/img/1_autocorrelation_graph.png) 
--->
+
+<!--
 <iframe src="assets/plot/1_autocorrelation_graph.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+-->
 
 ![1_autocorrelation_graph.png](./assets/img/1_autocorrelation_graph.png)
 
