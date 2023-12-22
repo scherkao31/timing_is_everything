@@ -48,7 +48,7 @@ We observe significantly different distributions among genres. Action films appe
 
 In our dataset, we have a wide range of countries represented. To study the link between location and the distribution of release months, we will group these countries by their continents.
 
-![1_movie_dist_continent_pie.png]("1_movie_dist_continent_pie.png") 
+![1_movie_dist_continent_pie.png](./assets/img/1_movie_dist_continent_pie.png) 
 
 The pie chart shows us the proportion of each continent in our dataset. We observe that three continents represent almost the entirety of our dataset, so we will focus on these.
 
@@ -79,7 +79,7 @@ TABLE
 
 3) Now, let's move on to visualization! Below is a histogram illustrating our results.
 
-![1_mean_percent_release_month_histo.png]("1_mean_percent_release_month_histo.png") 
+![1_mean_percent_release_month_histo.png](./assets/img/1_mean_percent_release_month_histo.png) 
 Upon examining this plot, we observe that the percentage of film releases per month is not evenly distributed throughout the year. This leads us to increasingly consider the hypothesis that there may be seasonality in film releases over the course of the year. However, we must exercise caution with this type of analysis because it's possible that if there is any seasonality in film releases, it may not have been consistent over time. For example, there might have been a pattern in the last 10 years, such as fewer film releases in July, but this may not have been the case in earlier years.
 
 To investigate this further, we will utilize the Canova Hansen Test.
@@ -101,7 +101,7 @@ An autocorrelation plot, or autocorrelogram, is a vital tool in time series anal
 
 - **Seasonality and Temporal Dependence**: Regular peaks at multiples of a specific period indicate seasonality. For example, annual peaks in monthly data would appear every 12 months, revealing a yearly seasonal trend.
 
-![1_autocorrelation_graph.png]("1_autocorrelation_graph.png") 
+![1_autocorrelation_graph.png](./assets/img/1_autocorrelation_graph.png) 
 
 ##### Analysis of the Autocorrelation plot:
 
@@ -144,11 +144,11 @@ Great! Now that we've ensured this pattern is stable, we'll attempt to extract t
 - In a multiplicative model, the residuals are obtained by dividing the original series by the product of the trend and seasonal components.
 - Large residuals can indicate anomalies or outliers in the data, such as an unexpected spike in movie releases due to a special event or a sudden drop due to external factors not captured by the model.
 
-![1_season_decomposition.png]("1_season_decomposition.png")
+![1_season_decomposition.png](./assets/img/1_season_decomposition.png)
 
 Without surprise, we observe that the overall trend increases for both the movies from [1976-1992] and those from [1993-2009]. We also notice that the seasonal patterns are different. Let's try to visualize them in more detail.
 
-![1_seasonal_effect_histos.png]("1_seasonal_effect_histos.png")
+![1_seasonal_effect_histos.png](./assets/img/1_seasonal_effect_histos.png)
 
 Indeed, we observe that the seasonal patterns have changed between these two periods. The more recent period seems to exhibit more pronounced differences among the months of the year compared to the previous period. For instance, in the most recent period, the month of July has a multiplicative factor relative to the trend of about 0.6, while in the past period, it was 0.8. On the other hand, the month of September is well above the general trend in the most recent period, at 1.6 times the trend, whereas in the past period, it was only 1.2.
 
@@ -185,7 +185,7 @@ It appears that the seasonal patterns within genres and locations remain stable 
 
 To further delve into this analysis, we will calculate autocorrelation, as done in section 2.3. However, this time, we will separate the film genres and continents.
 
-![1_matrix_genre_continent.png]("1_matrix_genre_continent.png")
+![1_matrix_genre_continent.png](./assets/img/1_matrix_genre_continent.png)
 
 The heatmap reveals some highly interesting findings. Firstly, it allows us to affirm that the presence or absence of an annual seasonal pattern varies depending on the cinematic genre and location. Let's take, for example, the cinematic genre "action" across all locations. We can observe that the autocorrelation is very low, or even non-existent, for North America, year after year (lag of 1 year). Consequently, we can conclude that it is unlikely for this cinematic genre to exhibit recurring patterns from year to year based on release months.
 
@@ -199,7 +199,7 @@ Furthermore, when examining each genre individually, we uncover disparities betw
 
 Similarly to the analysis conducted in point 2, we now focus on examining the seasonal multiplicative factors. The objective here is to highlight, for genres and locations exhibiting seasonal patterns as identified in point 3.2, the months that stand out from the general trend and contribute to the formation of these patterns.
 
-![1_heatmap_seasonality.png]("1_heatmap_seasonality.png")
+![1_heatmap_seasonality.png](./assets/img/1_heatmap_seasonality.png)
 
 It is interesting to delve into the case of the drama film genre. According to our analysis in section 3.2, this genre exhibited annual seasonality for all continents combined. However, this latest analysis reveals intriguing differences within its seasonal patterns.
 
@@ -208,13 +208,6 @@ Specifically, when examining the multiplicative factors of the drama genre in Eu
 It's important to note that both regions share high values for June and July and lower values for September.
 
 While we may not be able to discern every single difference between genres, locations, and release months individually, a quick glance at the heatmap confirms our initial hypothesis. Annual seasonal patterns indeed exist for certain genres and locations, and when they do, these patterns exhibit variations among them.
-
-### 1.2 Sub-part title
-Add your stuff here.
-### 1.3 Sub-part title
-Add your stuff here.
-### 1.4 Sub-part title
-Add your stuff here.
 
 #### Transition :
 
@@ -230,14 +223,15 @@ Now, as we roll out the red carpet, it's time to see how timing influences a mov
 There is no shortcut to win the crown. However, good timing makes an easier way! We can sometimes observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). Directed by Paul Haggis, it won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10.  
 
 Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize. We first have a look at how the movies with different release months are distributed in the Oscar selection.  
-![Release_Month_Distribution]("assets/img/Release_Month_Distribution.png")  
+
+![Release_Month_Distribution](./assets/img/Release_Month_Distribution.png)  
 
 The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar. For example, why movies released in December are significantly more than in other months?  
 
 ### 2.2 Level I: Entry to Oscar selection
 As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. Due to the fierce competition for final awards, many good movies cannot eventually get the Oscar prize, but getting selected as Oscar candidates is also an amazing achievement. Therefore, directors holding films with aspirations for the Oscar awards want to ask, if an optimal release timing can help them to win in the Oscar selection more easily. Generally, we can inspect the ratios of selection in each month. To view the results more clearly, we run a k-means clustering for release months.  
 
-![Selection_Kmeans]("assets/img/Selection_Kmeans.png")
+![Selection_Kmeans](./assets/img/Selection_Kmeans.png)
 
 From the graph, the optimal timings for entering Oscar selection are December and June, while movies released from January to April are harder to win the favor of the judges.
 
@@ -246,29 +240,29 @@ Do you know, that only **17.35%** nominated movies successfully take home Oscar 
 
 If a director has produced a film expected to be highly praised and is confident that this movie can be selected for Oscar grading for sure, when is the optimal timing in this case? Is it the same as timing for Level I players? We investigated it by clustering the winning ratio in the Oscar selection dataset.  
 
-![Win_Kmeans]("assets/img/Win_Kmeans.png")  
+![Win_Kmeans](./assets/img/Win_Kmeans.png)  
 
 The results reveal that the optimal timing is shifted to January and May, and December is now a very bad choice, only better than June and July.  
 
 How does the winning probability change over the years?  
 
 ![Dynamic Graph: Oscar Probability over Years]
-![Oscar_Probability_over_Years]("assets/img/Oscar Probability over Years.png")
+![Oscar_Probability_over_Years](./assets/img/Oscar Probability over Years.png)
 
 ### 2.4 Confounders: Locations and Languages
 Except for the timing, other factors may influence the winning probability as well. Here, we can take locations and languages into account.  
 
 We first check their percentage in the selected movies dataset.  
-![Movie_Countries_Selected]("assets/img/Movie_Countries_Selected.png")
-![Movie_Languages_Selected]("assets/img/Movie_Languages_Selected.png")
+![Movie_Countries_Selected](./assets/img/Movie_Countries_Selected.png)
+![Movie_Languages_Selected](./assets/img/Movie_Languages_Selected.png)
 
 Then, for the winners:
-![Movie_Countries_Win]("assets/img/Movie_Countries_Win.png")
-![Movie_Languages_Win]("assets/img/Movie_Languages_Win.png")
+![Movie_Countries_Win](./assets/img/Movie_Countries_Win.png)
+![Movie_Languages_Win](./assets/img/Movie_Languages_Win.png)
 
 They show the phenomenon that US movies and English movies take a predominant majority because they are mostly overlapping. We therefore assume that the influence of languages can be covered in location influence. For simplicity, we convert the countries to continents. 
 
-![Win_Possibility_per_Continent]("assets/img/Win_Possibility_per_Continent.png")
+![Win_Possibility_per_Continent](./assets/img/Win_Possibility_per_Continent.png)
 
 It presents that the most intense competition happens in North American movies. Even though their number is large in absolute value, it is never easy for them to win Oscar awards. In contrast, each Oceanian movie selected has a 40% winning probability.  
 
@@ -276,7 +270,7 @@ Based on this, we suggest that **common** North American directors, with the wis
 
 As a detailed exploration, we run clustering on the continental subsets to evaluate the chance of winning an Oscar after the nomination. 
 
-![Continent_Clustering]("assets/img/Continent_Clustering.png")
+![Continent_Clustering](./assets/img/Continent_Clustering.png)
 
 Then we can advise **successful directors** who promise to have Oscar-selected movies: 
 - for American and European movies, the general suggestion in Level II  (January) still holds.
@@ -284,7 +278,7 @@ Then we can advise **successful directors** who promise to have Oscar-selected m
 - for African and South American movies, we cannot conclude anything without extra data.
 
 Intuitively, this is shown in the heat map below.
-![Oscar_Heatmap]("assets/img/Oscar_Heatmap.png")
+![Oscar_Heatmap](./assets/img/Oscar_Heatmap.png)
 
 ## 2.5 Box Office Revenue
 
@@ -292,7 +286,7 @@ To continue our analysis of research question 2, we now delve into the other fac
 
 Let us first plot the box office revenue of movies based on whether they received an Oscar or not.  
 
-![Oscar_Box]("assets/img/Oscar_Box.png")
+![Oscar_Box](./assets/img/Oscar_Box.png)
 
 Mean Box Office Revenue (Oscar Winners): $141.49 million  
 Standard Deviation Box Office Revenue (Oscar Winners): $274.32 million  
@@ -367,8 +361,8 @@ Our analysis provides compelling evidence supporting a clear relationship betwee
 
 Associated with our analysis of box office revenue, this statistical test and the measures of our ratings prove once again the importance of a movie's sucess in its likelihood of receiving awards. However, as we have shown previously, it is important to notice that the movies that have received Oscars can divert from these assumptions, receiving low ratings and box office revenue. This is mostly due to artistic opinions directing the awards designations, which can be very different from the public opinion, as well as categories. Movies such as documentaries or foreign ones are often less likely to gross high revenues or receive high ratings, but can still be awarded Oscars. We show these deviations in the following section.  
 
-[Oscar_Category_Box]("assets/img/Oscar_Category_Box.png")
-[Oscar_Vote_Box]("assets/img/Oscar_Vote_Box.png")
+![Oscar_Category_Box](./assets/img/Oscar_Category_Box.png)
+![Oscar_Vote_Box](./assets/img/Oscar_Vote_Box.png)
 
 As we can see from the two box plots shown above, there is a significant difference in box office revenue and ratings between movies that received Oscars based on their category. Movies with Oscars such as Best Actress (in general) or Best Documentary generally received lower box office revenue and ratings than movies with Oscars such as Best Short Film or Actor. We also notice that the best documentary categories showcase an especially high variability in box office revenue and ratings, which is not the case for the best short film category. All these features indicate thus once again the biases that can be shown in the Oscars awards, which are not always correlated with the success of a movie, even though on a general basis, the Oscars are awarded to movies that have a higher box office revenue and ratings.  
 
@@ -401,7 +395,7 @@ Let's break down the box office cycle month by month. We'll analyze which months
 Zooming out, we'll assess box office performance by season. Is summer really the blockbuster champion? Does winter bring more than just the holiday spirit to theaters? We'll see how each season stacks up in the race for box office success.
 
 ## Jason Notebook
-[Rating_Heatmap]("assets/img/Rating_Heatmap.png")
+![Rating_Heatmap](./assets/img/Rating_Heatmap.png)
 
 Using the color bar scale for movie ratings that range from 5.6 to 6.6, we can draw specific conclusions from the first heatmap, which shows the relationship between movie ratings and release months across different genres:  
 
@@ -411,7 +405,7 @@ Slight Variations Within Genres: Within individual genres, there are slight vari
 
 No Extreme Seasonal Bias: Since the color variations are mild, we can conclude that there is no extreme seasonal bias in movie ratings. While some months may yield slightly higher ratings for certain genres, the impact of release timing on ratings is not overly pronounced.  
 
-[Vote_Correlation]("assets/img/Vote_Correlation.png")
+![Vote_Correlation](./assets/img/Vote_Correlation.png)
 
 
 Now, with the color bar scale for the number of votes, which ranges from 10,000 to 70,000, let's analyze the second heatmap that shows the correlation between the number of votes and release months for different movie genres:  
@@ -445,7 +439,7 @@ To have a more complete analysis and validation, Causal Analysis is done later
 ##### Rating Data Early Analysis
 Now, Plot a histogram of Ratings and check the mean, median, and mode  
 
-[Histogram_Rating]("assets/img/Histogram_Rating.png")
+![Histogram_Rating](./assets/img/Histogram_Rating.png)
 
 Movie Box Office Revenue:  
 The mean revenue is approximately 49.92 million, but there's a large standard deviation ($110.47 million), indicating a wide range in revenues.  
@@ -549,7 +543,7 @@ The release year might have an indirect effect on the number of votes and rating
 
 Let's visualize this causal graph  
 
-[Causal_Graph]("assets/img/Causal_Graph.png")
+![Causal_Graph](./assets/img/Causal_Graph.png)
 
 Release Month: Directly impacts both the number of votes (votes_number) and ratings (RATING).  
 Movie Genres, Runtime, and Release Year: These variables are assumed to influence both the number of votes and ratings.  
@@ -676,11 +670,11 @@ Strategic Release Timing: These insights suggest that strategic timing for movie
 ##### Exploring the Box Office Data  
 Now check the percentage of missing data in the 'box_office' column for each year to see if earlier stages had less documentation of box office revenues, which is true to an extent since missing data is still high for later years  
 
-[Average Rating]("assets/img/Average Rating.png")
+![Average Rating](./assets/img/Average Rating.png)
 
 Now, we plot a heat map to show the box office revenues and distribution over different ratings. An interesting is that the highest revenues seem to be for movies with ratings close to the mean and not the upper part of ratings.  
 
-[Density_Plot]("assets/img/Density_Plot.png")
+![Density_Plot](./assets/img/Density_Plot.png)
 
 ##### Conclusions
 1- The IMDB dataset, with its higher vote counts, is more robust for analyzing movie popularity than the CMU dataset.  
