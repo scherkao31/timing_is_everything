@@ -243,7 +243,11 @@ In the graph, the number varies significantly! It is therefore normalized to per
 
 ![Oscar_Distribution.png](./assets/img/Oscar_Distribution.png) 
 
-The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar. 
+Here is how the movie release months distributed over the years:  
+
+**[Dynamic Graph Here]**
+
+The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar.  
 
 ## 2.2 Period-wise Timing Study
 
@@ -263,7 +267,7 @@ In our ongoing analysis, the next step involves examining the correlation betwee
 
 This value indicates a weak correlation between 'Release Month' and 'Winner,' suggesting that the month of release alone does not exert a strong influence on Oscar outcomes. It becomes evident that other elements of a movie, beyond its release timing, play pivotal roles. This aligns with the rationale that a movie's success in securing an Oscar is not solely determined by an optimal release timing; rather, it involves a complex interplay of various factors, underscoring the importance of considering multiple aspects of a film in our analysis.
 
-**Key Findings:**
+## **Key Findings:**
 - In the early days, movies released later are always advantageous.
 - In the 1950s, December became the best time to release movies, and September was the suboptimal release month.
 - After the 1980s, May, June, and November joined the suboptimal time.
