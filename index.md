@@ -338,7 +338,8 @@ In this analysis, we explore the relationship between movie release timing and i
 ### 3.1. Ratings Versus Revenue – Does a "bad movie" makes less money than a "better" one ?
 First, let's tackle the correlation between ratings and revenue. It seems intuitive that higher ratings should mean more money, right? Well, our data tells a more nuanced story. We'll explore why movies with mediocre ratings don't necessarily earn less, and how those with top ratings don't always hit the jackpot in terms of revenue. It's a complex equation where excellence in ratings doesn't always translate into box office gold.
 
-<iframe src="assets/plot/3_rating_and_vote_vs_box_office.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe> 
+<iframe src="assets/plot/3_rating_and_vote_vs_box_office_rating.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe> 
+<iframe src="assets/plot/3_rating_and_vote_vs_box_office_vote.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe> 
 
 The data presented indicates a subtle relationship between a movie's ratings and its box office revenue. The correlation between rating and box office revenue is slightly negative (-0.0483), which suggests that, contrary to what one might expect, higher ratings do not necessarily equate to higher box office earnings. However, this relationship is very weak, as indicated by the correlation value being close to zero. It implies that factors other than just ratings are significant in determining a movie's financial success.
 
