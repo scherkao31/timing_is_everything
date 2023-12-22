@@ -20,7 +20,7 @@ author: Some Person
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  About Us: "aboutme"
   Resources:
     - The Dataset: "https://www.cs.cmu.edu/~ark/personas/"
   Project: "https://epfl-ada.github.io/teaching/fall2023/cs401/projects/"
