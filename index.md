@@ -21,9 +21,9 @@ _______________________________________________________________
 Let's dive into the intriguing interplay between movie genres and their release calendars. Are horror films naturally drawn to Halloween? Do summer months exclusively belong to action-packed blockbusters? In this part of our story, we'll try to see if there are any recurring patterns between a film's genre and its release timing within a year. Do these rhythms exist, and if so, do they change depending on where the movie is released? This exploration isn't just about identifying patterns; it's about understanding whether these insights can help us predict the genre of upcoming film releases in different seasons. It's time to discover if there's a secret rhythm dictating when different genres of movies make their grand entrance on the big screen.
 
 ## 1.1 Exploration
-### 1.1.1. Let's focus on what matters
+
 For this analysis, we will focus on the film genres, the release period of the year, and the locations where they are released.
-We observe, unsurprisingly, that the number of films increases considerably with the years. However, the proportion of older films is not negligible. In the context of our study, where we will investigate patterns that may exist between the time of year and the number of film releases, we must take this factor into account and study its evolution over time.
+We will also investigate patterns that may exist between the time of year and the number of film releases.
 
 ### 1.1.2. Annual periodicity and film genres
 Let's investigate the possible existence of a correlation between annual periodicity and film genres. It is also relevant to examine the existence of trends that are not dependent on the film genre or location. To provide us with an initial idea, we compute the monthly average of films released, considering all genres and locations. This gives us an overview of the distribution of film releases throughout the seasons.
@@ -65,9 +65,11 @@ Furthermore, upon examining this graph, we notice that after 2009, the number of
 
 ## 1.2. Comprehensive Seasonality Analysis Across All Genres and Locations
 
+Let's now investigate the possibility of seasonality in film releases, regardless of genre or location, over time. 
+
 ### 1.2.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Rates
 
-Let's now investigate the possibility of seasonality in film releases, regardless of genre or location, over time. To do so, we conduct a thorough analysis with the aim of predicting the percentage of films released each year during a specific month.
+We conduct a thorough analysis with the aim of predicting the percentage of films released each year during a specific month.
 
 ![1_mean_percent_release_month_histo.png](./assets/img/1_mean_percent_release_month_histo.png) 
 
@@ -79,9 +81,7 @@ To investigate this further, we will utilize the Canova Hansen Test.
 
 In the Canova-Hansen test, the 'm' parameter represents the data's seasonal period, for example, 12 for monthly data and 4 for quarterly data. A result of 'D = 1' indicates the need for seasonal differentiation to stabilize the seasonal pattern, suggesting variable seasonality in the data.
 
-In our case, the result of the Canova-Hansen Test is:  1
-
-The Canova-Hansen test reveals that the seasonal patterns in our data are not constant over the analyzed period. To deepen our understanding, we will calculate the autocorrelation of our data at various time lags. This analysis will enable us to determine how long a specific seasonal pattern persists in our dataset, providing more precise insights into the underlying temporal dynamics and the persistence of seasonal trends.
+The result of our Canova-Hansen Test is **1** which reveals that the seasonal patterns in our data are not constant over the analyzed period. To deepen our understanding, we will calculate the autocorrelation of our data at various time lags. This analysis will enable us to determine how long a specific seasonal pattern persists in our dataset, providing more precise insights into the underlying temporal dynamics and the persistence of seasonal trends.
 
 ### 1.2.3. Analysis of Seasonal Pattern Persistence : Autocorrelogramme
 
@@ -106,9 +106,7 @@ An autocorrelation plot, or autocorrelogram, is a vital tool in time series anal
    
    - The presence of these significant peaks at regular intervals, especially up to a lag of 17 years, indicates that the seasonal effect is not only strong but also has a long-term influence on the series. This suggests that past values, not just from the previous year but several years back, influence the current values.
 
-Note: At the beginning of the plot, we observe a few points in the first year that are negatively correlated and fall outside the confidence intervals. For example, the second and third points exhibit negative correlations. This implies that when calculating the correlation between our time series and the same time series shifted by two or three months, the values tend to be negatively correlated. This indicates the presence of intrinsic differences between the months, and this pattern appears to persist throughout the year. Besides this effect, no other significant peaks are evident in the graph.
-
-**Conclusion**: Therefore, we can assert two key findings: there is an annual seasonality in our data, as evidenced by the significant peaks occurring every 12 months in our autocorrelation plot. Furthermore, it seems that the seasonal effect has a long-term impact on the years, exhibiting significant correlations up to 17 years later.
+**Conclusion**: We can assert two key findings: there is an annual seasonality in our data, as evidenced by the significant peaks occurring every 12 months in our autocorrelation plot. Furthermore, it seems that the seasonal effect has a long-term impact on the years, exhibiting significant correlations up to 17 years later.
 Additionally, the fact that this autocorrelation is no longer significant after 17 years provides us with additional information: seasonality has evolved over time, aligning with the implications of the Canova-Hansen Test result.
 
 ### 1.2.4. Decoding Trends and Seasonality: Seasonality Visualization
