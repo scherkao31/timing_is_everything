@@ -161,6 +161,9 @@ In this section, we explore the potential presence of seasonality in film releas
 
 ### 1.3.2. Seasonal Stability Diagnostics: Canova-Hansen Testing by Category and Region
 
+
+<div align="center">
+
 | Genre        | Continent      | D Value |
 | ------------ | -------------- | ------- |
 | Action       | Asia           | 0       |
@@ -178,6 +181,9 @@ In this section, we explore the potential presence of seasonality in film releas
 | Thriller     | Asia           | 0       |
 | Thriller     | Europe         | 0       |
 | Thriller     | North America  | 0       |
+
+</div>
+
 
 
 It appears that the seasonal patterns within genres and locations remain stable throughout the selected period [1993-2009]. It's worth noting that this period was initially chosen in section 2.3 because the seasonal patterns, encompassing all genres and locations, were stable during that time. This latest analysis simply demonstrates that when we subdivide our dataset by genre and location, any intrinsic patterns within these subdatasets also remain consistent over the same period.
