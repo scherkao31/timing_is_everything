@@ -215,8 +215,9 @@ The results reveal that the optimal timing is shifted to January and May, and De
 
 How does the winning probability change over the years?  
 
-![Dynamic Graph: Oscar Probability over Years]
-![Oscar_Probability_over_Years](./assets/img/Oscar Probability over Years.png)
+[Dynamic Graph: Oscar Probability over Years]  
+
+![Oscar_Probability_over_Years](./assets/img/Oscar_Probability_over_Years.png)
 
 ### 2.4 Confounders: Locations and Languages
 Except for the timing, other factors may influence the winning probability as well. Here, we can take locations and languages into account.  
