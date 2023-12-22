@@ -47,7 +47,120 @@ We observe significantly different distributions among genres. Action films appe
 In our dataset, we have a wide range of countries represented. To study the link between location and the distribution of release months, we will group these countries by their continents.
 
 ![1_movie_dist_continent_pie.png]("1_movie_dist_continent_pie.png") 
-1_movie_dist_continent_pie.png
+
+The pie chart shows us the proportion of each continent in our dataset. We observe that three continents represent almost the entirety of our dataset, so we will focus on these.
+
+
+#### 1.1.5. Setting a Threshold for Data Inclusion
+
+Before continuing our analysis, it is important to take into account the distribution of the number of data by year.
+
+HISTOGRAM INTERACTIVE 
+
+This histogram displays the distribution of the number of films released each year, regardless of their genre or release location. We observe a significant increase over the years. To maintain the relevance of our analysis, we have established a threshold of 200 films per year as a selection criterion for the years to be included in our study. After applying this criterion, we selected the most recent year that did not meet it and then excluded all data prior to that date. This approach ensures that our dataset remains statistically relevant and consistent over time. Furthermore, upon examining this graph, we notice that after 2009, the number of films decreases significantly in the dataset. This trend appears counterintuitive and may be attributed to the difficulty of obtaining recent data (the dataset was published in 2012). To avoid potential data bias, we will, therefore, focus on data up to the year 2009.
+
+### 1.2. Comprehensive Seasonality Analysis Across All Genres and Locations
+
+#### 1.2.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Rates
+
+In this section, we investigate the possibility of seasonality in film releases, regardless of genre or location, over time. To do so, we conduct a thorough analysis with the aim of predicting the percentage of films released each year during a specific month.
+
+1) We start by grouping our dataset by year and month, then count the number of film releases in that year. Finally, we calculate the percentage of film releases for a specific month within that year. And this process is repeated for all the years.
+
+TABLE 
+
+For example, in the above context, we are examining the year 2009. In total, there were 2,329 films released during that year in our dataset. Out of these, 150 were released in the month of March, which means that approximately 6.4% of the films released that year were released in March.
+
+2) Now, we will calculate the average percentages obtained for each month across all the years. This will allow us to observe trends in film releases over the years.
+   
+TABLE
+
+3) Now, let's move on to visualization! Below is a histogram illustrating our results.
+
+![1_mean_percent_release_month_histo.png]("1_mean_percent_release_month_histo.png") 
+Upon examining this plot, we observe that the percentage of film releases per month is not evenly distributed throughout the year. This leads us to increasingly consider the hypothesis that there may be seasonality in film releases over the course of the year. However, we must exercise caution with this type of analysis because it's possible that if there is any seasonality in film releases, it may not have been consistent over time. For example, there might have been a pattern in the last 10 years, such as fewer film releases in July, but this may not have been the case in earlier years.
+
+To investigate this further, we will utilize the Canova Hansen Test.
+
+#### 1.2.2. Seasonal Pattern Stability: Canova-Hansen Tests on Time Series Data
+
+In the Canova-Hansen test, the 'm' parameter represents the data's seasonal period, for example, 12 for monthly data and 4 for quarterly data. A result of 'D = 1' indicates the need for seasonal differentiation to stabilize the seasonal pattern, suggesting variable seasonality in the data.
+
+The result of the Canova-Hansen Test is:  1
+
+The Canova-Hansen test reveals that the seasonal patterns in our data are not constant over the analyzed period. To deepen our understanding, we will calculate the autocorrelation of our data at various time lags. This analysis will enable us to determine how long a specific seasonal pattern persists in our dataset, providing more precise insights into the underlying temporal dynamics and the persistence of seasonal trends.
+
+#### 1.2.3. Analysis of Seasonal Pattern Persistence : Autocorrelogramme
+
+An autocorrelation plot, or autocorrelogram, is a vital tool in time series analysis, used for visualizing and measuring autocorrelation, i.e., the relationship between a time series and its past values at different lags.
+
+**Interpretation**
+- **Significant Peaks**: A peak in the autocorrelogram at a specific lag indicates significant autocorrelation at that lag. Peaks beyond the confidence bounds suggest statistically significant autocorrelation.
+
+- **Seasonality and Temporal Dependence**: Regular peaks at multiples of a specific period indicate seasonality. For example, annual peaks in monthly data would appear every 12 months, revealing a yearly seasonal trend.
+
+![1_autocorrelation_graph.png]("1_autocorrelation_graph.png") 
+
+##### Analysis of the Autocorrelation plot:
+
+1. **Initial Peak**: The first lag exhibits a peak close to 1, which is expected as it represents the correlation of the series with itself.
+
+2. **Subsequent Lags**: Several spikes are observed that exceed the blue shaded area, indicating statistical significance. These prominent peaks suggest significant autocorrelation at those lags.
+
+3. **Seasonal Patterns**: Notable peaks appear at regular intervals of 12 months (1 year) and persist beyond the confidence intervals up to a lag of 17 years. This implies two important findings: 
+
+   - The significant spikes at lags corresponding to multiples of 12 months (1 year, 2 years, etc.) suggest a strong and consistent annual seasonality in the data.
+   
+   - The presence of these significant peaks at regular intervals, especially up to a lag of 17 years, indicates that the seasonal effect is not only strong but also has a long-term influence on the series. This suggests that past values, not just from the previous year but several years back, influence the current values.
+
+Note: At the beginning of the plot, we observe a few points in the first year that are negatively correlated and fall outside the confidence intervals. For example, the second and third points exhibit negative correlations. This implies that when calculating the correlation between our time series and the same time series shifted by two or three months, the values tend to be negatively correlated. This indicates the presence of intrinsic differences between the months, and this pattern appears to persist throughout the year. Besides this effect, no other significant peaks are evident in the graph.
+
+**Conclusion**: Therefore, we can assert two key findings: there is an annual seasonality in our data, as evidenced by the significant peaks occurring every 12 months in our autocorrelation plot. Furthermore, it seems that the seasonal effect has a long-term impact on the years, exhibiting significant correlations up to 17 years later.
+Additionally, the fact that this autocorrelation is no longer significant after 17 years provides us with additional information: seasonality has evolved over time, aligning with the implications of the Canova-Hansen Test result.
+
+#### 1.2.4. Decoding Trends and Seasonality: Seasonality Visualization
+
+Now that we know that seasonality has changed over time and that patterns tend to change approximately every 17 years, we will attempt to visualize these differences. To do so, we will extract two datasets from our data. The first dataset will contain the most recent 17 years [1993, 2009], and the second will encompass the preceding 17 years [1976, 1992]. Subsequently, we will conduct a Canova-Hansen test to ensure that among these datasets, the seasonal motif remains stable.
+
+The result of the Canova-Hansen Test for the DataFrame containing the past year is: 0
+The result of the Canova-Hansen Test for the DataFrame containing the recent year is: 0
+
+Great! Now that we've ensured this pattern is stable, we'll attempt to extract the seasonality from our two different datasets. To do this, we'll use the highly useful function `seasonal_decompose` from `statsmodels`. This function allows us to decompose our time series into three components:
+
+**Trend Component**:
+- The trend shows the long-term progression of the data, smoothing out short-term fluctuations.
+- It indicates whether there's a general upward or downward trajectory in movie releases over time or if the industry is experiencing periods of growth, decline, or stability.
+- In a multiplicative model like the one we've chosen, the trend is scaled by the seasonal and residual components, suggesting that the impact of the trend may increase or decrease depending on the level of the time series.
+
+**Seasonal Component**:
+- The seasonal component captures regular patterns that occur within specific, fixed periods - in the case of monthly data, this might highlight yearly cycles.
+- It reveals the times of the year when movie releases are consistently higher or lower.
+- Since the model is multiplicative, the seasonality effect is proportional to the data. This means that if the trend is upward, the seasonal effect would amplify the peaks and troughs in the observed data.
+
+**Residual Component**:
+- Residuals represent the component of the data that cannot be explained by the trend or seasonal components. These are essentially the irregular or random fluctuations that remain after the trend and seasonal components have been accounted for.
+- In a multiplicative model, the residuals are obtained by dividing the original series by the product of the trend and seasonal components.
+- Large residuals can indicate anomalies or outliers in the data, such as an unexpected spike in movie releases due to a special event or a sudden drop due to external factors not captured by the model.
+
+![1_season_decomposition.png]("1_season_decomposition.png")
+
+Without surprise, we observe that the overall trend increases for both the movies from [1976-1992] and those from [1993-2009]. We also notice that the seasonal patterns are different. Let's try to visualize them in more detail.
+
+![1_seasonal_effect_histos.png]("1_seasonal_effect_histos.png")
+
+Indeed, we observe that the seasonal patterns have changed between these two periods. The more recent period seems to exhibit more pronounced differences among the months of the year compared to the previous period. For instance, in the most recent period, the month of July has a multiplicative factor relative to the trend of about 0.6, while in the past period, it was 0.8. On the other hand, the month of September is well above the general trend in the most recent period, at 1.6 times the trend, whereas in the past period, it was only 1.2.
+
+In conclusion, it's fascinating to observe how seasonal patterns evolve over time. We notice significant differences. The most recent period in our dataset appears to exhibit more pronounced variations than before, suggesting that these month-to-month differences seem to intensify over time.
+
+### 1.3. Detailed Study by Genre and Location
+
+In this section, we will examine whether there are differences in seasonality between film genres and locations. To do this, we will work exclusively with data from the ten most recent years in our dataset. The selection of these last ten years is motivated by several factors:
+
+1. Data Volume: The most recent years typically contain a larger number of films in our dataset, enabling a more robust and precise analysis of seasonal patterns, especially as we subdivide our dataset into subgroups.
+
+2. Stability of Seasonal Patterns: As demonstrated by the previous analysis, seasonal patterns appear to be stable every 17 years, regardless of genre or location. By taking this stability into account, we aim to limit biases related to the overall trend, allowing us to delve deeper into the analysis by genre and continent.
+
+#### 1.3.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Months depending on Genre and Location
 
 ### 1.2 Sub-part title
 Add your stuff here.
