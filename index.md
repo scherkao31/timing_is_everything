@@ -28,7 +28,7 @@ We observe, unsurprisingly, that the number of films increases considerably with
 #### 1.1.2. Bar chart of release months
 The study will investigate the possible existence of a correlation between annual periodicity and film genres. However, it is also relevant to examine the existence of trends that are not dependent on the film genre or location. To provide us with an initial idea, we will calculate the monthly average of films released, considering all genres and locations. This will give us an overview of the distribution of film releases throughout the seasons. Of course, further analysis will be necessary before drawing any definitive conclusions.
 
-![1_monthly_movie_count.png]("https://github.com/scherkao31/timing_is_everything/blob/master/assets/img/1_monthly_movie_count.png") 
+![1_monthly_movie_count.png](https://github.com/scherkao31/timing_is_everything/blob/master/assets/img/1_monthly_movie_count.png) 
 
 This bar chart allows us to conclude that the distribution of films throughout the year is not uniform; for instance, the summer months appear to have fewer releases than others. Therefore, it is necessary to differentiate, for each genre, whether the trend is driven by the overall distribution of films throughout the year or if it is specific to certain film genres.
 
@@ -36,7 +36,7 @@ This bar chart allows us to conclude that the distribution of films throughout t
 In our dataset, we have a wide variety of genres represented.  For now, we will focus on the five most represented genres in the dataset.
 Let's observe the representation of film genres in our resulting dataset.
 
-![1_movie_genre_dist_pie.png]("./assets/img/1_movie_genre_dist_pie.png") 
+![1_movie_genre_dist_pie.png](./assets/img/1_movie_genre_dist_pie.png) 
 
 The 'drama' genre predominates significantly, while the other genres are fairly balanced among themselves.Now, we will examine the distribution of films across months based on their genres.
 
