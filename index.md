@@ -403,33 +403,9 @@ Total Number of Votes per Month:
 Similar to box office revenue, the total number of votes varies across months, hinting at a correlation between release month and audience engagement.  
 
 ## Causal Analysis  
-The dataset contains several columns that are relevant to our causal analysis. Here's a brief overview of the columns:  
+The dataset contains several columns that are relevant to our causal analysis. For the causal analysis, the key variables of interest are Release Month, Movie box office revenue, votes_number, and RATING. Other variables like Release Year, Movie genres, Movie runtime, and Movie countries could be important as confounders or control variables.  
 
-Movie name: Another column for the movie title  
-
-Movie box office revenue: Box office revenue for the movie  
-
-Movie runtime: Runtime of the movie  
-
-Movie languages: Languages in which the movie was released  
-
-Movie countries: Countries where the movie was released  
-
-Movie genres: Genres of the movie  
-
-Release Year: Year of release  
-
-Release Month: Month of release  
-
-Release Day: Day of release  
-
-votes_number: Number of votes received  
-
-RATING: Rating of the movie  
-
-For the causal analysis, the key variables of interest are Release Month, Movie box office revenue, votes_number, and RATING. Other variables like Release Year, Movie genres, Movie runtime, and Movie countries could be important as confounders or control variables.  
-
-We will start by preprocessing the data, including dealing with missing values, and then proceed to create a causal graph. This graph will illustrate the assumed causal relationships between the release month and the movie's success/popularity, as well as other relevant variables. We'll then use propensity score matching and sensitivity analysis to draw conclusions.  
+We will start by preprocessing the data, including dealing with missing values, and then proceed to create a causal graph. This graph will illustrate the assumed causal relationships between the release month and the movie's success/popularity, as well as other relevant variables. We'll then use propensity score matching and sensitivity analysis to conclude.  
 
 Let's begin by preprocessing the data. ​​ 
 The dataset has a significant number of missing values in several key columns:  
@@ -481,45 +457,17 @@ With this causal framework in place, the next step is to use propensity score ma
 
 ## Propensity Score Estimation: 
 
-We'll estimate the propensity scores for each movie, which is the probability of being released in a particular month, given the observed covariates (movie genres, runtime, release year).
+We are diving into a comprehensive analysis of how a movie's release month affects its popularity. First, we estimate propensity scores, representing the likelihood of release in a specific month based on genre, runtime, country, and release year. Each month is treated as a binary "treatment," and logistic regression helps us model this.
 
-Since we have multiple release months, we'll treat each month as a separate "treatment" and compare it with the rest. This process will be iterative, comparing one month against all others in turn.
+Moving on, we use these propensity scores for nearest-neighbor matching, creating comparable groups for each release month. This meticulous process ensures meaningful comparisons. We then delve into effect estimation, comparing the average number of votes and ratings between matched movies in the treatment (e.g., January) and control (non-January) groups for each month.
 
-Let's start by estimating the propensity scores. For this, I'll use logistic regression, treating each month as a binary treatment (e.g., January vs. non-January) in separate models. After that, we'll proceed with the matching and effect estimation.
-Propensity scores for each movie's likelihood of being released in January (and similarly for other months) have been estimated using logistic regression. These scores represent the probability of a movie being released in a specific month, given its genre, runtime, country of release, and release year.
-
-The next step is to perform the matching. We will match movies based on these propensity scores to create comparable groups for each release month. There are various matching techniques, but a common approach is to use nearest-neighbor matching. This method pairs each movie in the treatment group (e.g., released in January) with a movie in the control group (not released in January) that has the closest propensity score.
-
-After matching, we will compare the average number of votes and ratings between matched movies in the treatment and control groups for each month. This will allow us to estimate the average effect of being released in each month on these outcomes.
-
-Let's proceed with the matching and then calculate the average effects. 
-
-
-Propensity Score Estimation: We'll estimate the propensity scores for each movie, which is the probability of being released in a particular month, given the observed covariates (movie genres, runtime, release year).  
-Matching: We'll match movies based on their propensity scores to create comparable groups for each release month.  
-Effect Estimation: After matching, we'll estimate the average effect of being released in each month on the number of votes and ratings.  
-
-Since we have multiple release months, we'll treat each month as a separate "treatment" and compare it with the rest. This process will be iterative, comparing one month against all others in turn.  
-
-Let's start by estimating the propensity scores. For this, I'll use logistic regression, treating each month as a binary treatment (e.g., January vs. non-January) in separate models. After that, we'll proceed with the matching and effect estimation.  
-
-Propensity scores for each movie's likelihood of being released in January (and similarly for other months) have been estimated using logistic regression. These scores represent the probability of a movie being released in a specific month, given its genre, runtime, country of release, and release year.  
-
-The next step is to perform the matching. We will match movies based on these propensity scores to create comparable groups for each release month. There are various matching techniques, but a common approach is to use nearest-neighbor matching. This method pairs each movie in the treatment group (e.g., released in January) with a movie in the control group (not released in January) that has the closest propensity score.  
-
-After matching, we will compare the average number of votes and ratings between matched movies in the treatment and control groups for each month. This will allow us to estimate the average effect of being released in each month on these outcomes.  
-
-The nearest-neighbor matching has been performed for each release month. For instance, for movies released in January (treatment group), we have identified the closest matches from movies not released in January (control group) based on their propensity scores.  
-
-Now, we will estimate the average effect of being released in each month on the number of votes and ratings. We'll calculate the Average Treatment Effect (ATE) for each month by comparing the matched pairs.  
+The story unfolds with the completion of nearest-neighbor matching for each release month, emphasizing precision in our comparisons. Now, we're set to calculate the Average Treatment Effect (ATE), unveiling the impact of release month on votes and ratings. This iterative approach allows us to draw nuanced insights, acknowledging the diversity of effects across various months. Let's unlock the cinematic secrets hidden in the data.  
 
 The ATE will be calculated as follows for each month:  
+- The treatment group (released in a specific month)  
+- The matched control group (not released in that month)    
 
-Average number of votes and ratings in the treatment group (released in a specific month)  
-
-Average number of votes and ratings in the matched control group (not released in that month)  
-
-ATE = Average in treatment group - Average in control group  
+ATE = Average in the treatment group - Average in the control group  
 
 | Month      | ATE Votes      | ATE Ratings   |
 |------------|----------------|---------------|
@@ -536,63 +484,51 @@ ATE = Average in treatment group - Average in control group
 | November   | -663.190941    |  0.037936     |
 | December   |  6810.117530   |  0.051232     |
 
-Key Observations:  
+Key Observations:
 
-Movies released in May, June, July, September, November, and December generally have a higher number of votes compared to those released in other months, suggesting greater popularity.  
+- Movies released in May, June, July, September, November, and December tend to attract a higher number of votes, indicating greater popularity.
+  
+- The most significant increase in ratings is observed for movies released in September and December.
+  
+- Conversely, movies released in January, February, March, and October show a decline in both votes and ratings, suggesting lower popularity and reduced critical reception on average.
 
-The highest increase in ratings is observed for movies released in September and December.  
+Overall, this analysis sheds light on how the timing of a movie's release can significantly influence its success and popularity.  
 
-Movies released in January, February, March, and October show a decrease in both votes and ratings, indicating lesser popularity and lower critical reception on average.  
+Based on the ATE data for votes and ratings across genres (Drama, Comedy, Thriller, Action, Romance Film), the key findings are:
 
-This analysis provides insights into how the timing of a movie's release can impact its success and popularity.  
+**Drama Genre:**  
 
-Based on the provided Average Treatment Effect (ATE) data for votes and ratings across various genres (Drama, Comedy, Thriller, Action, Romance Film), let's draw conclusions for each genre:  
+- Positive ATE in votes for April, September, November, and December, indicating higher popularity.  
+- Negative ATE in votes for May and June, suggesting lower popularity.  
+- Ratings show a general increase, especially in September and December.  
 
-#### Drama Genre  
+**Comedy Genre:**  
 
-Positive ATE in votes for April, September, November, and December, suggesting these months favor drama movies in terms of popularity.  
+- Mixed ATE pattern for votes, with significant increases in April and December, and decreases in months like May and July.  
+- Ratings peak in December but decline in other months such as April and May.  
 
-Negative ATE in votes for May and June, indicating lesser popularity.  
+**Thriller Genre:**
 
-Ratings show a general increase, particularly in September and December.  
+- Varied ATE for votes, with negatives in January, March, and October, and positives in June, September, and December.  
+- Ratings are highest in December, with notable declines in February and July.  
 
-These Observations are consistent with the Observations from Correlation heatmaps  
+**Action Genre:**
 
+- Negative ATE trend in votes early in the year and a positive trend towards the end, especially in June and September.  
+- Ratings fluctuate, with the highest increase in December and significant drops in February and July.  
 
-#### Comedy Genre  
+**Romance Film Genre:**  
 
-A mixed pattern in ATE for votes, with significant increases in April and December, and decreases in other months like May and July.  
-
-Ratings peak in December but show declines in other months such as April and May.  
-
-
-#### Thriller Genre
-A varied ATE for votes, with significant negatives in January, March, and October, but positives in June, September, and December.  
-
-Ratings are highest in December, with notable declines in February and July.  
-
-These Observations are consistent with the Observations from Correlation heatmaps  
-
-
-#### Action Genre
-
-ATE for votes shows a negative trend in the early part of the year and a positive trend towards the end, especially in June and September.  
-
-Ratings fluctuate, with the highest increase in December and significant drops in February and July.  
-
-#### Romance Film Genre  
-
-ATE for votes indicates lesser popularity for most of the year, except for a few months like April and May.  
-Ratings are generally low with a few exceptions, such as an increase in March and December.  
+- ATE for votes indicates lesser popularity for most months, except for April and May.  
+- Ratings are generally low with exceptions, such as an increase in March and December.  
 
 ### General Conclusions:  
 
-Seasonality: Each genre exhibits distinct seasonal patterns in both popularity (votes) and critical reception (ratings).  
+- Seasonality: Each genre exhibits distinct seasonal patterns in both popularity (votes) and critical reception (ratings).  
+- Popularity Peaks: Genres like Drama and Comedy fare better in votes towards the latter part of the year.  
+- Ratings Variability: Ratings fluctuate significantly across months and genres, with some genres experiencing their highest ratings towards the end of the year.  
+- Strategic Release Timing: Insights suggest that strategic timing for movie releases, tailored to the genre, can be crucial for maximizing success and reception.
 
-Popularity Peaks: Genres like Drama and Comedy seem to fare better in votes towards the latter part of the year.  
-Ratings Variability: Ratings fluctuate significantly across months and genres, with some genres like Thriller and Action experiencing their highest ratings towards the end of the year.  
-
-Strategic Release Timing: These insights suggest that strategic timing for movie releases can be crucial and should be tailored according to the genre to maximize success and reception.  
 
 ##### Exploring the Box Office Data  
 Now check the percentage of missing data in the 'box_office' column for each year to see if earlier stages had less documentation of box office revenues, which is true to an extent since missing data is still high for later years  
