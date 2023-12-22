@@ -135,9 +135,10 @@ Great! Now that we've ensured this pattern is stable, we'll attempt to extract t
 **The seasonal component** detects recurring patterns within set timeframes, like annual cycles in monthly data, indicating when releases typically spike or dip. This effect scales with the data, meaning it can make the natural highs and lows more pronounced if the overall trend is rising.
 
 **The residual component** is what's left unexplained after accounting for trend and seasonality, representing random variations. In this model, residuals are calculated by dividing the data by both trend and seasonal factors. Significant residuals might suggest unusual events impacting movie releases that the model doesn't otherwise account for.
-
+<!--
 ![1_season_decomposition.png](./assets/img/1_season_decomposition.png)
-
+-->
+<iframe src="assets/plot/1_season_decomposition.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 Without surprise, we observe that the overall trend increases for both the movies from [1976-1992] and those from [1993-2009]. We also notice that the seasonal patterns are different. Let's try to visualize them in more detail.
 
 ![1_seasonal_effect_histos.png](./assets/img/1_seasonal_effect_histos.png)
