@@ -111,26 +111,17 @@ Additionally, the fact that this autocorrelation is no longer significant after 
 
 ### 1.2.4. Decoding Trends and Seasonality: Seasonality Visualization
 
-Now that we know that seasonality has changed over time and that patterns tend to change approximately every 17 years, we will attempt to visualize these differences. To do so, we will extract two datasets from our data. The first dataset will contain the most recent 17 years [1993, 2009], and the second will encompass the preceding 17 years [1976, 1992]. Subsequently, we will conduct a Canova-Hansen test to ensure that among these datasets, the seasonal motif remains stable.
+Now that we know that seasonality has changed over time and that patterns tend to change approximately every 17 years, we will attempt to visualize these differences. To do so, we extract two datasets from our data. The first contains the most recent 17 years [1993, 2009], and the second the preceding 17 years [1976, 1992]. Subsequently, we conduct a Canova-Hansen test to ensure that among these datasets, the seasonal motif remains stable.
 
 The result of the Canova-Hansen Test for the the past years is 0, and that is also true for the recent years.
 
 Great! Now that we've ensured this pattern is stable, we'll attempt to extract the seasonality from our two different datasets. To do this, we'll use the highly useful function `seasonal_decompose` from `statsmodels`. This function allows us to decompose our time series into three components:
 
-**Trend Component**:
-- The trend shows the long-term progression of the data, smoothing out short-term fluctuations.
-- It indicates whether there's a general upward or downward trajectory in movie releases over time or if the industry is experiencing periods of growth, decline, or stability.
-- In a multiplicative model like the one we've chosen, the trend is scaled by the seasonal and residual components, suggesting that the impact of the trend may increase or decrease depending on the level of the time series.
+**The trend component** outlines the long-term direction of movie release data, smoothing out temporary changes and showing if the industry is growing, shrinking, or holding steady. In our multiplicative model, this trend's influence may vary at different data levels.
 
-**Seasonal Component**:
-- The seasonal component captures regular patterns that occur within specific, fixed periods - in the case of monthly data, this might highlight yearly cycles.
-- It reveals the times of the year when movie releases are consistently higher or lower.
-- Since the model is multiplicative, the seasonality effect is proportional to the data. This means that if the trend is upward, the seasonal effect would amplify the peaks and troughs in the observed data.
+**The seasonal component** detects recurring patterns within set timeframes, like annual cycles in monthly data, indicating when releases typically spike or dip. This effect scales with the data, meaning it can make the natural highs and lows more pronounced if the overall trend is rising.
 
-**Residual Component**:
-- Residuals represent the component of the data that cannot be explained by the trend or seasonal components. These are essentially the irregular or random fluctuations that remain after the trend and seasonal components have been accounted for.
-- In a multiplicative model, the residuals are obtained by dividing the original series by the product of the trend and seasonal components.
-- Large residuals can indicate anomalies or outliers in the data, such as an unexpected spike in movie releases due to a special event or a sudden drop due to external factors not captured by the model.
+**The residual component** is what's left unexplained after accounting for trend and seasonality, representing random variations. In this model, residuals are calculated by dividing the data by both trend and seasonal factors. Significant residuals might suggest unusual events impacting movie releases that the model doesn't otherwise account for.
 
 ![1_season_decomposition.png](./assets/img/1_season_decomposition.png)
 
@@ -144,11 +135,7 @@ In conclusion, it's fascinating to observe how seasonal patterns evolve over tim
 
 ## 1.3. Detailed Study by Genre and Location
 
-In this section, we will examine whether there are differences in seasonality between film genres and locations. To do this, we will work exclusively with data from the ten most recent years in our dataset. The selection of these last ten years is motivated by several factors:
-
-1. Data Volume: The most recent years typically contain a larger number of films in our dataset, enabling a more robust and precise analysis of seasonal patterns, especially as we subdivide our dataset into subgroups.
-
-2. Stability of Seasonal Patterns: As demonstrated by the previous analysis, seasonal patterns appear to be stable every 17 years, regardless of genre or location. By taking this stability into account, we aim to limit biases related to the overall trend, allowing us to delve deeper into the analysis by genre and continent.
+In this section, we will examine whether there are differences in seasonality between film genres and locations. To do this, we will work exclusively with data from the ten most recent years in our dataset.
 
 ### 1.3.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Months depending on Genre and Location
 
@@ -175,13 +162,11 @@ To further delve into this analysis, we will calculate autocorrelation, as done 
 
 ![1_matrix_genre_continent.png](./assets/img/1_matrix_genre_continent.png)
 
-The heatmap reveals some highly interesting findings. Firstly, it allows us to affirm that the presence or absence of an annual seasonal pattern varies depending on the cinematic genre and location. Let's take, for example, the cinematic genre "action" across all locations. We can observe that the autocorrelation is very low, or even non-existent, for North America, year after year (lag of 1 year). Consequently, we can conclude that it is unlikely for this cinematic genre to exhibit recurring patterns from year to year based on release months.
+The heatmap analysis uncovers intriguing patterns in movie release timing, showing that the predictability of release patterns varies by genre and region. For example, action movies in North America do not show a consistent annual pattern, suggesting their release timings are varied year to year.
 
-Conversely, certain cinematic genres show distinct patterns, with "drama" being a notable example. It demonstrates a very strong autocorrelation from one year to the next. This effect is particularly pronounced in Europe and North America, where the autocorrelation remains significant for up to 4 years. In such cases, we can confidently assert that this genre is highly likely to display an annual seasonal motif, and this pattern extends over several years.
+On the other hand, dramas, especially in Europe and North America, have a strong and consistent annual release pattern that can persist for up to four years, indicating a predictable seasonal trend in these regions.
 
-On a broader scale, the continent with the least autocorrelation in this dataset is Asia. Europe and North America seem to follow similar patterns based on their respective genres.
-
-Furthermore, when examining each genre individually, we uncover disparities between them. Some genres exhibit pronounced annual seasonal patterns, while others do not display such patterns at all.
+Overall, Asia displays the least predictability in movie release patterns, while Europe and North America exhibit more consistency according to genre. The analysis also highlights that while some genres follow strong seasonal trends, others show no such regularity.
 
 ### 1.3.3. Decoding Trends and Seasonality : by Genre Category and Region
 
@@ -189,13 +174,9 @@ Similarly to the analysis conducted in point 2, we now focus on examining the se
 
 ![1_heatmap_seasonality.png](./assets/img/1_heatmap_seasonality.png)
 
-It is interesting to delve into the case of the drama film genre. According to our analysis in section 3.2, this genre exhibited annual seasonality for all continents combined. However, this latest analysis reveals intriguing differences within its seasonal patterns.
+The drama genre presents a fascinating case study. While it shows an overall annual seasonality, a closer look reveals distinct regional differences. In Europe, May stands out as a popular month for drama releases, with a significant uptick compared to the average, while this month is not as prominent for drama releases in North America. Conversely, January is more significant for drama releases in North America than in Europe.
 
-Specifically, when examining the multiplicative factors of the drama genre in Europe and North America, we observe notable distinctions. In Europe, the month of May appears to be significant, with a multiplicative factor of 1.73 compared to the general trend, indicating that a substantial number of drama films are released in May. In contrast, in North America, May does not significantly impact the trend, as evidenced by a factor of 1.04. Conversely, January exhibits an inverse behavior, with North America having a factor of 1.63, while Europe's factor is 0.95.
-
-It's important to note that both regions share high values for June and July and lower values for September.
-
-While we may not be able to discern every single difference between genres, locations, and release months individually, a quick glance at the heatmap confirms our initial hypothesis. Annual seasonal patterns indeed exist for certain genres and locations, and when they do, these patterns exhibit variations among them.
+Both regions, however, see a surge in drama releases during June and July and a dip in September. This analysis confirms that while annual seasonal patterns do exist for certain genres and locations, they also display unique regional variations.
 
 ## Transition :
 
