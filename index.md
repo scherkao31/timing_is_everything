@@ -43,14 +43,14 @@ Now, as we roll out the red carpet, it's time to see how timing influences a mov
 There is no shortcut to win the crown. However, good timing makes an easier way! We can sometimes observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). Directed by Paul Haggis, it won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10.  
 
 Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize. We first have a look at how the movies with different release months are distributed in the Oscar selection.  
-[Release_Month_Distribution]("assets/img/Release_Month_Distribution.png")  
+[Release_Month_Distribution]("./assets/img/Release_Month_Distribution.png")  
 
 The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar. For example, why movies released in December are significantly more than in other months?  
 
 ### 2.2 Level I: Entry to Oscar selection
 As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. Due to the fierce competition for final awards, many good movies cannot eventually get the Oscar prize, but getting selected as Oscar candidates is also an amazing achievement. Therefore, directors holding films with aspirations for the Oscar awards want to ask, if an optimal release timing can help them to win in the Oscar selection more easily. Generally, we can inspect the ratios of selection in each month. To view the results more clearly, we run a k-means clustering for release months.  
 
-[Selection_Kmeans]("assets/img/Selection_Kmeans.png")
+[Selection_Kmeans]("./assets/img/Selection_Kmeans.png")
 
 From the graph, the optimal timings for entering Oscar selection are December and June, while movies released from January to April are harder to win the favor of the judges.
 
@@ -59,21 +59,21 @@ Do you know, that only **17.35%** nominated movies successfully take home Oscar 
 
 If a director has produced a film expected to be highly praised and is confident that this movie can be selected for Oscar grading for sure, when is the optimal timing in this case? Is it the same as timing for Level I players? We investigated it by clustering the winning ratio in the Oscar selection dataset.  
 
-[Win_Kmeans]("assets/img/Win_Kmeans.png")  
+[Win_Kmeans]("./assets/img/Win_Kmeans.png")  
 
 The results reveal that the optimal timing is shifted to January and May, and December is now a very bad choice, only better than June and July.  
 
 How does the winning probability change over the years?  
 
 [Dynamic Graph: Oscar Probability over Years]
-[Oscar_Probability_over_Years]("assets/img/Oscar Probability over Years.png")
+[Oscar_Probability_over_Years]("./assets/img/Oscar Probability over Years.png")
 
 ### 2.4 Confounders: Locations and Languages
 Except for the timing, other factors may influence the winning probability as well. Here, we can take locations and languages into account.  
 
 We first check their percentage in the selected movies dataset.  
-[Movie_Countries_Selected]("assets/img/Movie_Countries_Selected.png")
-[Movie_Languages_Selected]("assets/img/Movie_Languages_Selected.png")
+[Movie_Countries_Selected]("./assets/img/Movie_Countries_Selected.png")
+[Movie_Languages_Selected]("./assets/img/Movie_Languages_Selected.png")
 
 Then, for the winners:
 [Movie_Countries_Win]("assets/img/Movie_Countries_Win.png")
