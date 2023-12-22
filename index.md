@@ -33,7 +33,21 @@ This bar chart allows us to conclude that the distribution of films throughout t
 #### 1.1.3. Repartition of the main genre
 In our dataset, we have a wide variety of genres represented.  For now, we will focus on the five most represented genres in the dataset.
 Let's observe the representation of film genres in our resulting dataset.
+
 ![1_movie_genre_dist_pie.png]("1_movie_genre_dist_pie.png") 
+
+The 'drama' genre predominates significantly, while the other genres are fairly balanced among themselves.Now, we will examine the distribution of films across months based on their genres.
+
+TONS OF GRAPHS : WHAT TO DO ?
+
+We observe significantly different distributions among genres. Action films appear to have a relatively uniform distribution throughout the year. It's worth noting that action is the only genre that doesn't experience a decline during the summer, which contradicts the general trend. It's important to mention that for the final analysis, correlation tests will be considered to confirm whether or not months can have an impact on certain genres
+
+#### 1.1.4. Repartition of the continent
+
+In our dataset, we have a wide range of countries represented. To study the link between location and the distribution of release months, we will group these countries by their continents.
+
+![1_movie_dist_continent_pie.png]("1_movie_dist_continent_pie.png") 
+1_movie_dist_continent_pie.png
 
 ### 1.2 Sub-part title
 Add your stuff here.
