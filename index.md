@@ -208,7 +208,7 @@ The drama genre presents a fascinating case study. While it shows an overall ann
 
 Both regions, however, see a surge in drama releases during June and July and a dip in September. This analysis confirms that while annual seasonal patterns do exist for certain genres and locations, they also display unique regional variations.
 
-## Transition :
+## Transition
 
 As our data story unfolds, it's clear that certain movie genres do have their preferred release times. But why? While it's straightforward for Christmas and Halloween movies, other genres aren't as clear-cut. Perhaps production companies are tuning into the public's mood, providing just the right kind of film at just the right time. Or maybe, they've learned from experience that release timing can significantly influence a film's success. After all, isn't that a key goal for them - to make their movies as successful as possible? But here's a thought - what exactly defines success in the film industry? Is it the accolades from peers or the applause from the audience? Well, it's time to explore both. To satisfy the film aficionados among us, let's first dive into how the release calendar impacts the most prestigious accolade in the movie world – the Oscar.
 
@@ -314,7 +314,7 @@ Echoing the box office revenue analysis, these results emphasize the impact of a
 
 As we can see from the two box plots shown above, there is a significant difference in box office revenue and ratings between movies that received Oscars based on their category. Movies with Oscars such as Best Actress (in general) or Best Documentary generally received lower box office revenue and ratings than movies with Oscars such as Best Short Film or Actor. We also notice that the best documentary categories showcase an especially high variability in box office revenue and ratings, which is not the case for the best short film category. All these features indicate thus once again the biases that can be shown in the Oscars awards, which are not always correlated with the success of a movie, even though on a general basis, the Oscars are awarded to movies that have a higher box office revenue and ratings.  
 
-## **Conclusion:** 
+#### **Conclusion:** 
 
 USA is the country of most movies in the dataset, and the majority of movies are in English. While the correlation between release month and whether the movie wins an Oscar award is weak, release timing might still be a significant factor influencing the success of the movie. Meanwhile, higher box office revenue, critical acclaim, and audience appreciation influence industry recognition and positively contribute to winning an Oscar award. Other influencing factors include artistic opinions directing the awards designations and differences in categories.
 
@@ -450,12 +450,11 @@ To delve deeper into resolving our central dilemma, we will now conduct a thorou
 | November   | -663.190941    |  0.037936     |
 | December   |  6810.117530   |  0.051232     |
 
-Key Takeaways:
+**Key Takeaways:**
 
 Films released in May, June, July, September, November, and December are more popular, getting more votes.
 The highest boost in ratings is seen for films debuting in September and December.
 Movies released in January, February, March, and October aren't as popular, with fewer votes and lower ratings.
-This study highlights that when a movie is released can really impact how well it does.
 
 #### Conlusion and nuances
 
@@ -483,15 +482,15 @@ In our journey through the intricate world of movie release strategies and succe
 
 **Key Insights:**
 
-- Seasonal Synchrony with Genres: We've seen how movie genres dance with the calendar, finding their unique rhythms across seasons. The release timing of a film is more than just a date; it's a strategic decision that aligns with audience expectations and cultural moments.
+- **Seasonal Synchrony with Genres:** We've seen how movie genres dance with the calendar, finding their unique rhythms across seasons. The release timing of a film is more than just a date; it's a strategic decision that aligns with audience expectations and cultural moments.
 
-- Oscar Timing: Delving into the glamorous realm of the Oscars, we've discovered that the timing of a release can be pivotal in a film's journey to award success. While other factors undoubtedly play a role, the strategic release of movies, particularly towards the end of the year, appears to increase their Oscar prospects.
+- **Oscar Timing:** Delving into the glamorous realm of the Oscars, we've discovered that the timing of a release can be pivotal in a film's journey to award success. While other factors undoubtedly play a role, the strategic release of movies, particularly towards the end of the year, appears to increase their Oscar prospects.
 
-- Box Office Revelations: The correlation between box office success and release timing is undeniable. Certain months, like November and December, emerge as favorable for maximizing financial returns, reflecting a blend of holiday seasons and award timings.
+- **Box Office Revelations:** The correlation between box office success and release timing is undeniable. Certain months, like November and December, emerge as favorable for maximizing financial returns, reflecting a blend of holiday seasons and award timings.
 
-- Ratings vs. Revenue: Our analysis has shown that high ratings do not always guarantee high revenues and vice versa. This dichotomy between critical acclaim and commercial success underscores the multi-faceted nature of a film's success.
+- **Ratings vs. Revenue:** Our analysis has shown that high ratings do not always guarantee high revenues and vice versa. This dichotomy between critical acclaim and commercial success underscores the multi-faceted nature of a film's success.
 
-- Seasonal and Genre Trends: The interplay between movie genres and seasons reveals fascinating insights. Each genre has its season, and understanding this could be crucial for filmmakers and marketers aiming for box office success.
+-** Seasonal and Genre Trends: **The interplay between movie genres and seasons reveals fascinating insights. Each genre has its season, and understanding this could be crucial for filmmakers and marketers aiming for box office success.
 
 In summary, our exploration into the CBU movie dataset has not only highlighted the significant role of timing in a film's success but also underscored the complexity of factors at play. From genre-specific seasonal trends to the intricate dance with award seasons and box office revenues, timing emerges as a crucial, though not solitary, player in the success story of a film. 
 
