@@ -163,7 +163,6 @@ In this section, we explore the potential presence of seasonality in film releas
 
 <br>
 
-<div align="center">
 
 | Genre        | Continent      | D Value |
 | ------------ | -------------- | ------- |
@@ -183,7 +182,7 @@ In this section, we explore the potential presence of seasonality in film releas
 | Thriller     | Europe         | 0       |
 | Thriller     | North America  | 0       |
 
-</div>
+
 
 
 
