@@ -237,7 +237,7 @@ Yes, the movies selected for the Oscar prize are mainly from North America, and 
 **Release Year:**  
 Intuitively, the number of movies released each year is very different. This is also true for the number of nominated movies. If we consider movies released in different years as a whole, it could introduce bias in our conclusion. How many movies are selected for the Oscar prize each year?
 
-![Oscar_Histogram.png](./assets/img/Oscar_Histogram.png.png) 
+![Oscar_Histogram.png](./assets/img/Oscar_Histogram.png) 
 
 In the graph, the number varies significantly! It is therefore normalized to percentage and averaged over the years.
 
