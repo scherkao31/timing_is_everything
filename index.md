@@ -21,12 +21,12 @@ _______________________________________________________________
 Let's dive into the intriguing interplay between movie genres and their release calendars. Are horror films naturally drawn to Halloween? Do summer months exclusively belong to action-packed blockbusters? In this part of our story, we'll try to see if there are any recurring patterns between a film's genre and its release timing within a year. Do these rhythms exist, and if so, do they change depending on where the movie is released? This exploration isn't just about identifying patterns; it's about understanding whether these insights can help us predict the genre of upcoming film releases in different seasons. It's time to discover if there's a secret rhythm dictating when different genres of movies make their grand entrance on the big screen.
 
 ### 1.1 Exploration
-#### 1.1.1. Removing uncessary information for this research question
+#### 1.1.1. Let's focus on what matters
 For this analysis, we will focus on the film genres, the release period of the year, and the locations where they are released.
 We observe, unsurprisingly, that the number of films increases considerably with the years. However, the proportion of older films is not negligible. In the context of our study, where we will investigate patterns that may exist between the time of year and the number of film releases, we must take this factor into account and study its evolution over time.
 
-#### 1.1.2. Bar chart of release months
-The study will investigate the possible existence of a correlation between annual periodicity and film genres. However, it is also relevant to examine the existence of trends that are not dependent on the film genre or location. To provide us with an initial idea, we will calculate the monthly average of films released, considering all genres and locations. This will give us an overview of the distribution of film releases throughout the seasons. Of course, further analysis will be necessary before drawing any definitive conclusions.
+#### 1.1.2. Annual periodicity and film genres
+Let's investigate the possible existence of a correlation between annual periodicity and film genres. It is also relevant to examine the existence of trends that are not dependent on the film genre or location. To provide us with an initial idea, we compute the monthly average of films released, considering all genres and locations. This gives us an overview of the distribution of film releases throughout the seasons.
 
 ![1_monthly_movie_count.png](./assets/img/1_monthly_movie_count.png) 
 
@@ -42,7 +42,7 @@ The 'drama' genre predominates significantly, while the other genres are fairly 
 
 TONS OF GRAPHS : WHAT TO DO ?
 
-We observe significantly different distributions among genres. Action films appear to have a relatively uniform distribution throughout the year. It's worth noting that action is the only genre that doesn't experience a decline during the summer, which contradicts the general trend. It's important to mention that for the final analysis, correlation tests will be considered to confirm whether or not months can have an impact on certain genres
+We observe significantly different distributions among genres. Action films appear to have a relatively uniform distribution throughout the year. It's worth noting that action is the only genre that doesn't experience a decline during the summer, which contradicts the general trend. It's important to mention that for our final word, correlation tests will be considered to confirm whether or not months can have an impact on certain genres
 
 #### 1.1.4. Repartition of the continent
 
@@ -55,31 +55,22 @@ The pie chart shows us the proportion of each continent in our dataset. We obser
 
 #### 1.1.5. Setting a Threshold for Data Inclusion
 
-Before continuing our analysis, it is important to take into account the distribution of the number of data by year.
+Before continuing, it is important to take into account and important factor, the distribution of the number of data by year.
 
 HISTOGRAM INTERACTIVE 
 
-This histogram displays the distribution of the number of films released each year, regardless of their genre or release location. We observe a significant increase over the years. To maintain the relevance of our analysis, we have established a threshold of 200 films per year as a selection criterion for the years to be included in our study. After applying this criterion, we selected the most recent year that did not meet it and then excluded all data prior to that date. This approach ensures that our dataset remains statistically relevant and consistent over time. Furthermore, upon examining this graph, we notice that after 2009, the number of films decreases significantly in the dataset. This trend appears counterintuitive and may be attributed to the difficulty of obtaining recent data (the dataset was published in 2012). To avoid potential data bias, we will, therefore, focus on data up to the year 2009.
+This histogram displays the distribution of the number of films released each year, regardless of their genre or release location. We observe a significant increase over the years. To maintain the relevance of our analysis, we have established a threshold of 200 films per year as a selection criterion for the years to be included in our study. After applying this criterion, we selected the most recent year that did not meet it and then excluded all data prior to that date. This approach ensures that our dataset remains statistically relevant and consistent over time.
+
+Furthermore, upon examining this graph, we notice that after 2009, the number of films decreases significantly in the dataset. This trend appears counterintuitive and may be attributed to the difficulty of obtaining recent data (the dataset was published in 2012). To avoid potential data bias, we are focusing on data up to the year 2009.
 
 ### 1.2. Comprehensive Seasonality Analysis Across All Genres and Locations
 
 #### 1.2.1. Monthly Cinematic Release Dynamics: Histogram Analysis of Release Rates
 
-In this section, we investigate the possibility of seasonality in film releases, regardless of genre or location, over time. To do so, we conduct a thorough analysis with the aim of predicting the percentage of films released each year during a specific month.
-
-1) We start by grouping our dataset by year and month, then count the number of film releases in that year. Finally, we calculate the percentage of film releases for a specific month within that year. And this process is repeated for all the years.
-
-TABLE 
-
-For example, in the above context, we are examining the year 2009. In total, there were 2,329 films released during that year in our dataset. Out of these, 150 were released in the month of March, which means that approximately 6.4% of the films released that year were released in March.
-
-2) Now, we will calculate the average percentages obtained for each month across all the years. This will allow us to observe trends in film releases over the years.
-   
-TABLE
-
-3) Now, let's move on to visualization! Below is a histogram illustrating our results.
+Let's now investigate the possibility of seasonality in film releases, regardless of genre or location, over time. To do so, we conduct a thorough analysis with the aim of predicting the percentage of films released each year during a specific month.
 
 ![1_mean_percent_release_month_histo.png](./assets/img/1_mean_percent_release_month_histo.png) 
+
 Upon examining this plot, we observe that the percentage of film releases per month is not evenly distributed throughout the year. This leads us to increasingly consider the hypothesis that there may be seasonality in film releases over the course of the year. However, we must exercise caution with this type of analysis because it's possible that if there is any seasonality in film releases, it may not have been consistent over time. For example, there might have been a pattern in the last 10 years, such as fewer film releases in July, but this may not have been the case in earlier years.
 
 To investigate this further, we will utilize the Canova Hansen Test.
@@ -88,7 +79,7 @@ To investigate this further, we will utilize the Canova Hansen Test.
 
 In the Canova-Hansen test, the 'm' parameter represents the data's seasonal period, for example, 12 for monthly data and 4 for quarterly data. A result of 'D = 1' indicates the need for seasonal differentiation to stabilize the seasonal pattern, suggesting variable seasonality in the data.
 
-The result of the Canova-Hansen Test is:  1
+In our case, the result of the Canova-Hansen Test is:  1
 
 The Canova-Hansen test reveals that the seasonal patterns in our data are not constant over the analyzed period. To deepen our understanding, we will calculate the autocorrelation of our data at various time lags. This analysis will enable us to determine how long a specific seasonal pattern persists in our dataset, providing more precise insights into the underlying temporal dynamics and the persistence of seasonal trends.
 
@@ -124,8 +115,7 @@ Additionally, the fact that this autocorrelation is no longer significant after 
 
 Now that we know that seasonality has changed over time and that patterns tend to change approximately every 17 years, we will attempt to visualize these differences. To do so, we will extract two datasets from our data. The first dataset will contain the most recent 17 years [1993, 2009], and the second will encompass the preceding 17 years [1976, 1992]. Subsequently, we will conduct a Canova-Hansen test to ensure that among these datasets, the seasonal motif remains stable.
 
-The result of the Canova-Hansen Test for the DataFrame containing the past year is: 0
-The result of the Canova-Hansen Test for the DataFrame containing the recent year is: 0
+The result of the Canova-Hansen Test for the the past years is 0, and that is also true for the recent years.
 
 Great! Now that we've ensured this pattern is stable, we'll attempt to extract the seasonality from our two different datasets. To do this, we'll use the highly useful function `seasonal_decompose` from `statsmodels`. This function allows us to decompose our time series into three components:
 
