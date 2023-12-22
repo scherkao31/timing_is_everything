@@ -244,6 +244,7 @@ In the graph, the number varies significantly! It is therefore normalized to per
 ![Oscar_Distribution.png](./assets/img/Oscar_Distribution.png) 
 
 Here is how the movie release months distributed over the years:  
+(Please only select one decade each time!)
 
 <iframe src="assets/plot/2_movie_release_months_distributed_over_years.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
