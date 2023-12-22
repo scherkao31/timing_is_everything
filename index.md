@@ -488,3 +488,5 @@ In our journey through the intricate world of movie release strategies and succe
 In summary, our exploration into the CBU movie dataset has not only highlighted the significant role of timing in a film's success but also underscored the complexity of factors at play. From genre-specific seasonal trends to the intricate dance with award seasons and box office revenues, timing emerges as a crucial, though not solitary, player in the success story of a film. 
 
 **Our story concludes with a realization:** in the world of cinema, as in life, timing is indeed everything. It's about capturing the right moment, understanding your audience, and harmoniously aligning with the cultural and seasonal milieu. This intricate dance of timing, content, and audience is what makes the movie industry a fascinating realm of endless possibilities and discoveries.
+
+![](./assets/img/the_end.png)
