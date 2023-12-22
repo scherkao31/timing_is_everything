@@ -37,21 +37,68 @@ _______________________________________________________________
 
 # Setting Your Watch for the Red Carpet - How Timing Influences Oscar Success (Question 2)
 
-Now, as we roll out the red carpet, it's time to see how timing influences a movie's journey to Oscar glory. Is there a 'golden month' for releasing a film that could increase its chances of capturing that coveted golden statue? In this part of our exploration, we will try to see which factors impact a movie's success, especially in terms of its likelihood to win an Oscar. Does release timing play a crucial role, and has its effect evolved over time? We're also going to delve into whether it's possible to predict a film's Oscar odds based on various factors, including its release month, the country of origin, language, and more. Let's discover the intricate dance between the calendar and the Oscars.
+Now, as we roll out the red carpet, it's time to see how timing influences a movie's journey to Oscar glory. Is there a 'golden month' for releasing a film that could increase its chances of capturing that coveted golden statue? In this part of our exploration, we will try to see which factors impact a movie's success, especially in terms of its likelihood to win an Oscar. Does release timing play a crucial role, and has its effect evolved over time? We're also going to delve into whether it's possible to predict a film's Oscar odds based on various factors, including its release month, the country of origin, language, and more. Let's discover the intricate dance between the calendar and the Oscars.  
 
 ### 2.1 Overview
-There is no shortcut to win the crown. However, good timing makes a easier way! We sometimes can observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). "Crash," directed by Paul Haggis, won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10. 
-Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize. We first have a look at how the movies with different release months are distributed in the Oscar selection.
-[Bar Chart: Distribution of release month]
-### 2.2 The predominant role of US movies 
-Add your stuff here.
+There is no shortcut to win the crown. However, good timing makes an easier way! We can sometimes observe that winning movies are not always promised to be the best. While opinions on the quality of movies can vary, one example often cited as a movie with mixed critical reception that still won multiple Oscars is "Crash" (2004). Directed by Paul Haggis, it won the Academy Award for Best Picture at the 78th Academy Awards. However, its victory was met with controversy, as some critics and viewers felt that other films, such as "Brokeback Mountain," were more deserving. Another example is "The Greatest Show on Earth" (1952) directed by Cecil B. DeMille. This circus drama won the Academy Award for Best Picture at the 25th Academy Awards. While it achieved commercial success, it wasn't universally praised by critics and has received a quite low IMDb rating of only 6.5/10.  
 
-### 2.3 Level I: Entry to Oscar selection
-As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. 
-Add your stuff here.
+Among other factors, We will ask, if the release timing plays a role in winning an Oscar prize. We first have a look at how the movies with different release months are distributed in the Oscar selection.  
+[Release_Month_Distribution]("assets/img/Release_Month_Distribution.png")  
 
-### 2.4 Level II: Oscar Winner
-Add your stuff here.
+The imbalanced distribution indicates that we can explore how timing poses an impact on the possibility of winning an Oscar. For example, why movies released in December are significantly more than in other months?  
+
+### 2.2 Level I: Entry to Oscar selection
+As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. Due to the fierce competition for final awards, many good movies cannot eventually get the Oscar prize, but getting selected as Oscar candidates is also an amazing achievement. Therefore, directors holding films with aspirations for the Oscar awards want to ask, if an optimal release timing can help them to win in the Oscar selection more easily. Generally, we can inspect the ratios of selection in each month. To view the results more clearly, we run a k-means clustering for release months.  
+
+[Selection_Kmeans]("assets/img/Selection_Kmeans.png")
+
+From the graph, the optimal timings for entering Oscar selection are December and June, while movies released from January to April are harder to win the favor of the judges.
+
+### 2.3 Level II: Oscar Winner
+Do you know, that only **17.35%** nominated movies successfully take home Oscar awards! And thinking about the low selection ratio, winners need not only good quality films but also some good luck.  
+
+If a director has produced a film expected to be highly praised and is confident that this movie can be selected for Oscar grading for sure, when is the optimal timing in this case? Is it the same as timing for Level I players? We investigated it by clustering the winning ratio in the Oscar selection dataset.  
+
+[Win_Kmeans]("assets/img/Win_Kmeans.png")  
+
+The results reveal that the optimal timing is shifted to January and May, and December is now a very bad choice, only better than June and July.  
+
+How does the winning probability change over the years?  
+
+[Dynamic Graph: Oscar Probability over Years]
+[Oscar_Probability_over_Years]("assets/img/Oscar Probability over Years.png")
+
+### 2.4 Confounders: Locations and Languages
+Except for the timing, other factors may influence the winning probability as well. Here, we can take locations and languages into account.  
+
+We first check their percentage in the selected movies dataset.  
+[Movie_Countries_Selected]("assets/img/Movie_Countries_Selected.png")
+[Movie_Languages_Selected]("assets/img/Movie_Languages_Selected.png")
+
+Then, for the winners:
+[Movie_Countries_Win]("assets/img/Movie_Countries_Win.png")
+[Movie_Languages_Win]("assets/img/Movie_Languages_Win.png")
+
+They show the phenomenon that US movies and English movies take a predominant majority because they are mostly overlapping. We therefore assume that the influence of languages can be covered in location influence. For simplicity, we convert the countries to continents. 
+
+[Win_Possibility_per_Continent]("assets/img/Win_Possibility_per_Continent.png")
+
+It presents that the most intense competition happens in North American movies. Even though their number is large in absolute value, it is never easy for them to win Oscar awards. In contrast, each Oceanian movie selected has a 40% winning probability.  
+
+Based on this, we suggest that **common** North American directors, with the wish to win Oscar prizes, should generally consider releasing new movies in January and May. For **common** Australian directors, they should release the films in December and June.
+
+As a detailed exploration, we run clustering on the continental subsets to evaluate the chance of winning an Oscar after the nomination. 
+
+[Continent_Clustering]("assets/img/Continent_Clustering.png")
+
+Then we can give advice to **successful directors** who promise to have Oscar-selected movies: 
+- for American and European movies, the general suggestion in Level II  (January) still holds.
+- despite the limited data, we are reluctant to say that, for Asian movies, the optimal timings are March, August, and November, while for Oceanian movies November is the only best time
+- for African and South American movies, we cannot conclude anything without extra data.
+
+Intuitively, this is shown in the heat map below.
+[Oscar_Heatmap]("assets/img/Oscar_Heatmap.png")
+
 
 #### Transition :
 
