@@ -50,7 +50,7 @@ The imbalanced distribution indicates that we can explore how timing poses an im
 ### 2.2 Level I: Entry to Oscar selection
 As a bright pearl in the film industry, the Oscar Prize favors only the most successful movies with profound thinking and artistic value. Due to the fierce competition for final awards, many good movies cannot eventually get the Oscar prize, but getting selected as Oscar candidates is also an amazing achievement. Therefore, directors holding films with aspirations for the Oscar awards want to ask, if an optimal release timing can help them to win in the Oscar selection more easily. Generally, we can inspect the ratios of selection in each month. To view the results more clearly, we run a k-means clustering for release months.  
 
-[Selection_Kmeans]("./assets/img/Selection_Kmeans.png")
+[Selection_Kmeans]('./assets/img/Selection_Kmeans.png')
 
 From the graph, the optimal timings for entering Oscar selection are December and June, while movies released from January to April are harder to win the favor of the judges.
 
