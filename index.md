@@ -28,7 +28,10 @@ We will also investigate patterns that may exist between the time of year and th
 ### 1.1.2. Annual periodicity and film genres
 Let's investigate the possible existence of a correlation between annual periodicity and film genres. It is also relevant to examine the existence of trends that are not dependent on the film genre or location. To provide us with an initial idea, we compute the monthly average of films released, considering all genres and locations. This gives us an overview of the distribution of film releases throughout the seasons.
 
-![1_monthly_movie_count.png](./assets/img/1_monthly_movie_count.png) 
+{::comment}
+![1_monthly_movie_count.png](./assets/img/1_monthly_movie_count.png)
+{:/comment}
+<iframe src="assets/plot/1_monthly_movie_count.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
 This bar chart allows us to conclude that the distribution of films throughout the year is not uniform; for instance, the summer months appear to have fewer releases than others. Therefore, it is necessary to differentiate, for each genre, whether the trend is driven by the overall distribution of films throughout the year or if it is specific to certain film genres.
 
